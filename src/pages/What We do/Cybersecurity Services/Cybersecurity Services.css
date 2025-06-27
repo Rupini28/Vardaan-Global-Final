@@ -1,0 +1,1083 @@
+/* Cybersecurity Services Container */
+.cybersecurity-container {
+  background-color: white;
+  min-height: 100vh;
+  width: 100%;
+  /* CSS variable for background image opacity - increased for better visibility */
+  --bg-image-opacity: 0.9;
+  /* Performance optimizations */
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+ 
+/* Force remove any semicircle decorative elements */
+.cybersecurity-container *::before,
+.cybersecurity-container *::after {
+  display: none !important;
+}
+ 
+/* Override for service cards to allow before/after pseudo-elements */
+.cybersecurity-container .service-card::before,
+.cybersecurity-container .service-card::after {
+  display: block !important;
+}
+ 
+/* Header Section with Hero Banner */
+.cybersecurity-header {
+  position: relative;
+  background-image: url('../../../assets/images/Cyber Security/Cyber\ Security.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  height: 640px;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific Hero Banner Class to Override Any Conflicts */
+.cybersecurity-services-hero-banner {
+  position: relative !important;
+  background-image: url('../../../assets/images/Cyber Security/Cyber Security.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  color: white !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  height: 640px !important;
+  min-height: 640px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+ 
+.cybersecurity-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 60, 114, 0.6);
+  z-index: 1;
+}
+ 
+.header-titles {
+  position: relative;
+  z-index: 2;
+}
+ 
+.cybersecurity-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+ 
+.cybersecurity-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 30px 0 0 0;
+  color: #ffffff;
+  opacity: 0.9;
+}
+ 
+
+ 
+/* Floating Particles - Optimized for performance */
+.floating-particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: float linear infinite;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+ 
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(0deg); }
+  100% { transform: translateY(-100px) rotate(360deg); }
+}
+ 
+/* Image section removed - now using image as hero banner background */
+ 
+/* Services Section */
+.cybersecurity-services-section {
+  padding: 80px 20px 40px 20px; /* Reduced bottom padding from 80px to 40px */
+  background: white;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+ 
+.services-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+ 
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+ 
+.section-description {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+ 
+/* Cybersecurity Services Grid - Standard card layout */
+.cybersecurity-services-section .cybersecurity-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Standard Service Card - Base styles */
+.cybersecurity-services-section .service-card {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  height: 380px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
+}
+
+/* Completely disable all hover effects */
+.cybersecurity-services-section .service-card {
+  pointer-events: none;
+}
+
+.cybersecurity-services-section .service-card:hover,
+.cybersecurity-services-section .service-card:focus,
+.cybersecurity-services-section .service-card:active {
+  cursor: default !important;
+  transform: none !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+  transition: none !important;
+  outline: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  background: white !important;
+}
+
+/* Ensure no hover effects on any child elements */
+.cybersecurity-services-section .service-card:hover *,
+.cybersecurity-services-section .service-card:focus *,
+.cybersecurity-services-section .service-card:active *,
+.cybersecurity-services-section .service-card:hover::before,
+.cybersecurity-services-section .service-card:hover::after,
+.cybersecurity-services-section .service-card:focus::before,
+.cybersecurity-services-section .service-card:focus::after,
+.cybersecurity-services-section .service-card:active::before,
+.cybersecurity-services-section .service-card:active::after {
+  transform: none !important;
+  transition: none !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any focus ring or outline */
+.cybersecurity-services-section .service-card,
+.cybersecurity-services-section .service-card *,
+.cybersecurity-services-section .service-card::before,
+.cybersecurity-services-section .service-card::after {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+ 
+/* Background image section for card header */
+.cybersecurity-services-section .service-card::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 280px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  z-index: 1 !important;
+  display: block !important;
+  border-radius: 20px 20px 0 0 !important;
+}
+ 
+/* Specific background images for each service card */
+.cybersecurity-services-section .service-card:nth-child(1)::after {
+  background-image: url('../../../assets/images/Cyber Security/RedPen Vulnerability.jpg') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(2)::after {
+  background-image: url('../../../assets/images/Cyber Security/vciso-services.jpg') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(3)::after {
+  background-image: url('../../../assets/images/Cyber Security/incident-response.avif') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(4)::after {
+  background-image: url('../../../assets/images/Cyber Security/security-posture.jpg') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(5)::after {
+  background-image: url('../../../assets/images/Cyber Security/security-planning.jpg') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(6)::after {
+  background-image: url('../../../assets/images/Cyber Security/risk-governance.webp') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(7)::after {
+  background-image: url('../../../assets/images/Cyber Security/security-operations.jpg') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(8)::after {
+  background-image: url('../../../assets/images/Cyber Security/systems-integration.jpg') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(9)::after {
+  background-image: url('../../../assets/images/Cyber Security/project-management.avif') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(10)::after {
+  background-image: url('../../../assets/images/Cyber Security/endpoint-detection.jpg') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(11)::after {
+  background-image: url('../../../assets/images/Cyber Security/red-teaming.jpg') !important;
+}
+ 
+.cybersecurity-services-section .service-card:nth-child(12)::after {
+  background-image: url('../../../assets/images/Cyber Security/breach-simulation.avif') !important;
+}
+ 
+/* Remove overlay gradient */
+.cybersecurity-services-section .service-card::before {
+  display: none !important;
+}
+
+/* Remove hover effects */
+ 
+/* Remove any borders from service cards and all their children */
+.cybersecurity-services-section .service-card,
+.cybersecurity-services-section .service-card *,
+.cybersecurity-services-section .service-content,
+.cybersecurity-services-section .service-content * {
+  border: none !important;
+  outline: none !important;
+}
+ 
+.cybersecurity-services-section .service-content {
+  position: relative;
+  z-index: 3;
+  padding: 270px 15px 10px 15px;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background: transparent;
+}
+ 
+.cybersecurity-services-section .service-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  text-align: center;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Specific styling for the RedPen title */
+.cybersecurity-services-section .service-card:nth-child(1) .service-title {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+/* Specific styling for the long title */
+.cybersecurity-services-section .service-card:nth-child(5) .service-title {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+ 
+.cybersecurity-services-section .service-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #1e3c72;
+  border-radius: 2px;
+}
+ 
+.cybersecurity-services-section .service-description {
+  display: none;
+}
+
+/* Add a subtle glow effect on hover */
+.cybersecurity-services-section .service-card:hover::after {
+  filter: brightness(1.1);
+}
+ 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cybersecurity-services-section .cybersecurity-services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+  
+  .cybersecurity-services-section .service-card {
+    height: 360px;
+  }
+  
+  .cybersecurity-services-section .service-content {
+    padding: 250px 12px 8px 12px;
+  }
+}
+ 
+@media (max-width: 1024px) {
+  .cybersecurity-services-section .cybersecurity-services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+ 
+  .cybersecurity-services-section .service-card {
+    height: 340px;
+  }
+  
+  .cybersecurity-services-section .service-card::after {
+    height: 250px !important;
+  }
+  
+  .cybersecurity-services-section .service-content {
+    padding: 240px 10px 6px 10px;
+  }
+ 
+  .cybersecurity-title {
+    font-size: 3rem;
+  }
+ 
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+ 
+@media (max-width: 900px) {
+  .cybersecurity-services-section .cybersecurity-services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .cybersecurity-services-section .service-card {
+    height: 300px;
+  }
+  
+  .cybersecurity-services-section .service-card::after {
+    height: 220px !important;
+  }
+ 
+  .cybersecurity-services-section .service-title {
+    font-size: 1.05rem;
+  }
+  
+  .cybersecurity-services-section .service-card:nth-child(1) .service-title {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+  
+  .cybersecurity-services-section .service-card:nth-child(5) .service-title {
+    font-size: 0.95rem;
+  }
+  
+  .cybersecurity-services-section .service-content {
+    padding: 210px 10px 6px 10px;
+  }
+}
+ 
+/* Responsive styles for specific hero banner */
+@media (max-width: 768px) {
+  .cybersecurity-services-hero-banner {
+    height: 500px !important;
+    min-height: 500px !important;
+  }
+
+  .cybersecurity-header {
+    height: 500px;
+    min-height: 500px;
+  }
+ 
+  .cybersecurity-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+ 
+  .cybersecurity-subtitle {
+    font-size: 1.1rem;
+  }
+ 
+  .cybersecurity-services-section .cybersecurity-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+ 
+  .cybersecurity-services-section .service-card {
+    height: 260px;
+  }
+  
+  .cybersecurity-services-section .service-card::after {
+    height: 180px !important;
+  }
+ 
+  .cybersecurity-services-section .service-title {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  
+  .cybersecurity-services-section .service-card:nth-child(1) .service-title {
+    font-size: 0.75rem;
+    line-height: 1.0;
+  }
+  
+  .cybersecurity-services-section .service-card:nth-child(5) .service-title {
+    font-size: 0.8rem;
+    line-height: 1.1;
+  }
+  
+  .cybersecurity-services-section .service-content {
+    padding: 170px 8px 5px 8px;
+  }
+ 
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+ 
+@media (max-width: 640px) {
+  .cybersecurity-services-section .cybersecurity-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+ 
+  .cybersecurity-services-section .service-card {
+    height: 260px;
+  }
+  
+  .cybersecurity-services-section .service-card::after {
+    height: 180px !important;
+  }
+  
+  .cybersecurity-services-section .service-content {
+    padding: 170px 10px 8px 10px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .cybersecurity-services-hero-banner {
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+ 
+  .cybersecurity-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+ 
+  .cybersecurity-subtitle {
+    font-size: 1rem;
+  }
+ 
+  .cybersecurity-services-section .service-card {
+    height: 240px;
+  }
+  
+  .cybersecurity-services-section .service-card::after {
+    height: 160px !important;
+  }
+ 
+  .cybersecurity-services-section .service-title {
+    font-size: 0.85rem;
+  }
+  
+  .cybersecurity-services-section .service-card:nth-child(1) .service-title {
+    font-size: 0.65rem;
+    line-height: 0.95;
+  }
+  
+  .cybersecurity-services-section .service-card:nth-child(5) .service-title {
+    font-size: 0.75rem;
+    line-height: 1.0;
+  }
+  
+  .cybersecurity-services-section .service-content {
+    padding: 150px 8px 6px 8px;
+  }
+ 
+  .section-title {
+    font-size: 2rem;
+  }
+}
+ 
+/* Visit Our Website Section Styles */
+.cyber-website-section {
+  margin: 0px 20px 80px 20px;  /* Reduced top margin to 0px */
+  padding: 15px 30px; /* Reduced top/bottom padding from 25px to 15px */
+  background: linear-gradient(270deg, rgba(42, 57, 144, 0.08), rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.06), rgba(236, 72, 153, 0.05));
+  background-size: 400% 400%;
+  border-radius: 20px;
+  border: 1px solid rgba(42, 57, 144, 0.15);
+  box-shadow: 0 8px 32px rgba(42, 57, 144, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: cyber-slideInUp 0.8s ease-out, cyber-morphingGradient 8s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+}
+ 
+.cyber-website-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  animation: cyber-shimmer 4s ease-in-out infinite;
+}
+ 
+.cyber-website-section::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(42, 57, 144, 0.1) 0%, transparent 70%);
+  animation: cyber-rotating-glow 12s linear infinite;
+  z-index: 1;
+}
+ 
+@keyframes cyber-slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+@keyframes cyber-morphingGradient {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+ 
+@keyframes cyber-rotating-glow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+ 
+@keyframes cyber-shimmer {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+ 
+/* Floating Particles Animation */
+.cyber-particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+ 
+.cyber-particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(42, 57, 144, 0.6), rgba(59, 130, 246, 0.4));
+  border-radius: 50%;
+  opacity: 0.7;
+}
+ 
+.cyber-particle-1 {
+  width: 8px;
+  height: 8px;
+  top: 20%;
+  left: 10%;
+  animation: cyber-float-particle 6s ease-in-out infinite, cyber-glow-pulse 3s ease-in-out infinite;
+}
+ 
+.cyber-particle-2 {
+  width: 12px;
+  height: 12px;
+  top: 60%;
+  left: 85%;
+  animation: cyber-float-particle 8s ease-in-out infinite reverse, cyber-glow-pulse 4s ease-in-out infinite 1s;
+}
+ 
+.cyber-particle-3 {
+  width: 6px;
+  height: 6px;
+  top: 80%;
+  left: 20%;
+  animation: cyber-float-particle 7s ease-in-out infinite, cyber-glow-pulse 2.5s ease-in-out infinite 2s;
+}
+ 
+.cyber-particle-4 {
+  width: 10px;
+  height: 10px;
+  top: 30%;
+  left: 70%;
+  animation: cyber-float-particle 9s ease-in-out infinite reverse, cyber-glow-pulse 3.5s ease-in-out infinite 0.5s;
+}
+ 
+.cyber-particle-5 {
+  width: 7px;
+  height: 7px;
+  top: 10%;
+  left: 50%;
+  animation: cyber-float-particle 5s ease-in-out infinite, cyber-glow-pulse 4s ease-in-out infinite 1.5s;
+}
+ 
+.cyber-particle-6 {
+  width: 9px;
+  height: 9px;
+  top: 70%;
+  left: 60%;
+  animation: cyber-float-particle 6.5s ease-in-out infinite reverse, cyber-glow-pulse 2.8s ease-in-out infinite 2.5s;
+}
+ 
+@keyframes cyber-float-particle {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  25% { transform: translateY(-20px) translateX(10px) scale(1.1); }
+  50% { transform: translateY(-15px) translateX(-8px) scale(0.9); }
+  75% { transform: translateY(-25px) translateX(12px) scale(1.05); }
+}
+ 
+@keyframes cyber-glow-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(42, 57, 144, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(42, 57, 144, 0.4); }
+}
+ 
+/* Floating Geometric Shapes */
+.cyber-shapes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+ 
+.cyber-floating-shape {
+  position: absolute;
+  opacity: 0.3;
+}
+ 
+.cyber-shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid rgba(42, 57, 144, 0.6);
+  top: 15%;
+  right: 15%;
+  animation: cyber-float-rotate 10s ease-in-out infinite;
+}
+ 
+.cyber-shape-circle {
+  width: 16px;
+  height: 16px;
+  background: rgba(147, 51, 234, 0.5);
+  border-radius: 50%;
+  top: 25%;
+  left: 15%;
+  animation: cyber-float-bounce 8s ease-in-out infinite;
+}
+ 
+.cyber-shape-square {
+  width: 12px;
+  height: 12px;
+  background: rgba(236, 72, 153, 0.5);
+  transform: rotate(45deg);
+  top: 75%;
+  right: 20%;
+  animation: cyber-float-spin 12s linear infinite;
+}
+ 
+.cyber-shape-hexagon {
+  width: 14px;
+  height: 12px;
+  background: rgba(59, 130, 246, 0.5);
+  position: relative;
+  top: 65%;
+  left: 80%;
+  animation: cyber-float-morph 9s ease-in-out infinite;
+}
+ 
+.cyber-shape-hexagon::before,
+.cyber-shape-hexagon::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+ 
+.cyber-shape-hexagon::before {
+  bottom: 100%;
+  border-bottom: 4px solid rgba(59, 130, 246, 0.5);
+}
+ 
+.cyber-shape-hexagon::after {
+  top: 100%;
+  border-top: 4px solid rgba(59, 130, 246, 0.5);
+}
+ 
+@keyframes cyber-float-rotate {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(180deg); }
+}
+ 
+@keyframes cyber-float-bounce {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  25% { transform: translateY(-12px) scale(1.1); }
+  50% { transform: translateY(-8px) scale(0.95); }
+  75% { transform: translateY(-18px) scale(1.05); }
+}
+ 
+@keyframes cyber-float-spin {
+  0% { transform: rotate(45deg) translateY(0px); }
+  100% { transform: rotate(405deg) translateY(-10px); }
+}
+ 
+@keyframes cyber-float-morph {
+  0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
+  33% { transform: translateY(-10px) scale(1.2) rotate(120deg); }
+  66% { transform: translateY(-5px) scale(0.8) rotate(240deg); }
+}
+ 
+.cyber-website-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+  z-index: 5;
+}
+ 
+.cyber-website-text {
+  font-size: 1.1rem;
+  color: #2a3990;
+  font-weight: 500;
+  line-height: 1.4;
+  position: relative;
+  z-index: 5;
+}
+ 
+/* Typewriter Effect */
+.cyber-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: cyber-expand-width 2s steps(60) 1s both;
+}
+ 
+.cyber-typewriter-text {
+  display: inline-block;
+  animation: cyber-typing 3s steps(60) 1s both, cyber-blink-caret 1s step-end 4s infinite;
+  border-right: 3px solid #2a3990;
+}
+ 
+@keyframes cyber-expand-width {
+  from { max-width: 0; }
+  to { max-width: 100%; }
+}
+ 
+@keyframes cyber-typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+ 
+@keyframes cyber-blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #2a3990; }
+}
+ 
+.cyber-website-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #2a3990 0%, #3b4ba8 100%);
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(42, 57, 144, 0.3), 0 0 0 0 rgba(42, 57, 144, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  animation: cyber-bounceIn 1s ease-out 2s both, cyber-pulse-ring 2s ease-out 3s infinite;
+  z-index: 5;
+}
+ 
+.cyber-button-text {
+  position: relative;
+  z-index: 3;
+}
+ 
+.cyber-button-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  border-radius: 50px;
+  opacity: 0;
+  animation: cyber-glow-sweep 3s ease-in-out infinite 2.5s;
+  z-index: 2;
+}
+ 
+.cyber-website-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+  transform: translateX(-150%);
+  transition: transform 0.8s ease;
+  z-index: 1;
+}
+ 
+.cyber-website-button:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 12px 35px rgba(42, 57, 144, 0.6), 0 0 0 8px rgba(42, 57, 144, 0.1);
+  background: linear-gradient(135deg, #3b4ba8 0%, #4a5bc0 100%);
+  border-color: rgba(255, 255, 255, 0.3);
+  animation: none;
+}
+ 
+.cyber-website-button:hover::before {
+  transform: translateX(150%);
+}
+ 
+.cyber-website-button:hover .cyber-button-glow {
+  opacity: 1;
+  animation: none;
+}
+ 
+.cyber-website-button:active {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(42, 57, 144, 0.5), 0 0 0 4px rgba(42, 57, 144, 0.2);
+}
+ 
+/* Ripple Effect */
+.cyber-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: cyber-ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+ 
+@keyframes cyber-bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-5px);
+  }
+  70% {
+    transform: scale(0.95) translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+ 
+@keyframes cyber-pulse-ring {
+  0% { box-shadow: 0 6px 20px rgba(42, 57, 144, 0.3), 0 0 0 0 rgba(42, 57, 144, 0.4); }
+  50% { box-shadow: 0 6px 20px rgba(42, 57, 144, 0.3), 0 0 0 6px rgba(42, 57, 144, 0.1); }
+  100% { box-shadow: 0 6px 20px rgba(42, 57, 144, 0.3), 0 0 0 0 rgba(42, 57, 144, 0); }
+}
+ 
+@keyframes cyber-glow-sweep {
+  0%, 100% { opacity: 0; transform: translateX(-100%); }
+  50% { opacity: 1; transform: translateX(100%); }
+}
+ 
+@keyframes cyber-ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+ 
+@keyframes cyber-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+/* Responsive styles for website section */
+@media (max-width: 1200px) {
+  .cyber-website-section {
+    margin: 0px 15px 60px 15px;
+    padding: 12px 25px;
+  }
+ 
+  .cyber-website-content {
+    gap: 25px;
+  }
+ 
+  .cyber-website-text {
+    font-size: 1rem;
+  }
+ 
+  .cyber-website-button {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .cyber-website-section {
+    margin: 0px 10px 50px 10px;
+    padding: 10px 20px;
+  }
+ 
+  .cyber-website-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+ 
+  .cyber-website-text {
+    font-size: 0.95rem;
+  }
+ 
+  .cyber-typewriter {
+    white-space: normal;
+    animation: none;
+  }
+ 
+  .cyber-typewriter-text {
+    animation: cyber-fadeInUp 1s ease-out 0.5s both;
+    border-right: none;
+  }
+ 
+  .cyber-website-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+ 
+  .cyber-particle {
+    display: none;
+  }
+ 
+  .cyber-floating-shape {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+}
+ 
+@media (max-width: 480px) {
+  .cyber-website-section {
+    margin: 0px 10px 40px 10px;
+    padding: 8px 18px;
+  }
+ 
+  .cyber-website-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+ 
+  .cyber-website-text {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+ 
+  .cyber-typewriter {
+    white-space: normal;
+    animation: none;
+  }
+ 
+  .cyber-typewriter-text {
+    animation: cyber-fadeInUp 1s ease-out 0.3s both;
+    border-right: none;
+  }
+ 
+  .cyber-website-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+ 
+  .cyber-particle,
+  .cyber-floating-shape {
+    display: none;
+  }
+}
+ 
+/* Remove all hover-related styles */
+ 

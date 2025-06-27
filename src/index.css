@@ -1,0 +1,13 @@
+/* Basic CSS Reset and global styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f8fafc;
+  color: #222;
+} 

@@ -1,0 +1,484 @@
+.erp-services-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #1a2a5e;
+}
+
+/* Hero Banner Styles */
+.erp-hero-banner {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  min-height: 680px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.erp-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.erp-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 60, 114, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.erp-hero-title {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+h1 {
+  text-align: center;
+  color: #1a2a5e;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.erp-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.services-timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 4px;
+  background-color: #1a2a5e;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #1a2a5e;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timeline-dot:nth-child(1) { top: 8%; }
+.timeline-dot:nth-child(2) { top: 20%; }
+.timeline-dot:nth-child(3) { top: 32%; }
+.timeline-dot:nth-child(4) { top: 44%; }
+.timeline-dot:nth-child(5) { top: 56%; }
+.timeline-dot:nth-child(6) { top: 68%; }
+.timeline-dot:nth-child(7) { top: 80%; }
+.timeline-dot:nth-child(8) { top: 92%; }
+
+/* Row-based layout */
+.service-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+  align-items: center;
+  height: 300px;
+  gap: 20px;
+}
+
+.service-content-wrapper {
+  width: 40%;
+  position: absolute;
+  z-index: 3;
+}
+
+.service-content-wrapper.left {
+  right: 58%;
+}
+
+.service-content-wrapper.right {
+  left: 58%;
+}
+
+.service-content {
+  border: 2px solid #1a2a5e;
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-content-wrapper.left .service-content {
+  text-align: right;
+  padding-right: 40px;
+}
+
+.service-content-wrapper.right .service-content {
+  text-align: left;
+  padding-left: 40px;
+}
+
+.service-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #1a2a5e;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #1a2a5e;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.service-content-wrapper.left .icon-circle {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -40px;
+  left: auto;
+}
+
+.service-content-wrapper.right .icon-circle {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -40px;
+  right: auto;
+}
+
+.service-content h3 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.service-content p {
+  line-height: 1.5;
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Service images styling */
+.service-image-wrapper {
+  width: 35%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 3;
+  position: absolute;
+}
+
+.service-image-wrapper.left {
+  left: 5%;
+}
+
+.service-image-wrapper.right {
+  right: 5%;
+}
+
+.service-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Remove extra spacing for last item */
+.service-row:last-child {
+  margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 992px) {
+  .erp-hero-banner {
+    height: 350px;
+    margin-bottom: 35px;
+  }
+  
+  .erp-hero-title {
+    font-size: 3rem;
+  }
+  
+  /* Hide timeline for mobile */
+  .timeline-line {
+    display: none;
+  }
+  
+  .timeline-dot {
+    display: none;
+  }
+  
+  .services-timeline {
+    position: static;
+    padding: 20px 0;
+  }
+  
+  .service-row {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    height: auto;
+    margin-bottom: 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    gap: 0;
+  }
+  
+  /* Ensure consistent order: image first, then content */
+  .service-image-wrapper {
+    order: 1;
+    position: static;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .service-content-wrapper {
+    order: 2;
+    position: static;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .service-image-wrapper.left,
+  .service-image-wrapper.right {
+    order: 1;
+    position: static;
+    left: auto;
+    right: auto;
+    margin: 0;
+  }
+  
+  .service-content-wrapper.left,
+  .service-content-wrapper.right {
+    order: 2;
+    position: static;
+    right: auto;
+    left: auto;
+  }
+  
+  .service-content {
+    border: none;
+    padding: 20px 0;
+    text-align: center;
+    height: auto;
+    background: transparent;
+    display: block;
+  }
+  
+  .service-content-wrapper.left .service-content,
+  .service-content-wrapper.right .service-content {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .icon-circle {
+    position: static;
+    width: 80px;
+    height: 80px;
+    margin: 12px auto 15px auto;
+    transform: none;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+  
+  .service-content h3 {
+    font-size: 1.6rem;
+    margin: 15px 0 10px 0;
+  }
+  
+  .service-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .erp-hero-banner {
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 0;
+  }
+  
+  .erp-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .erp-services-container {
+    padding: 15px;
+  }
+  
+  h1 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+  }
+  
+  .erp-intro {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .services-timeline {
+    margin-top: 15px;
+    padding: 15px 0;
+  }
+  
+  .service-row {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-image-wrapper {
+    order: 1;
+    height: 180px;
+  }
+  
+  .service-image-wrapper.left,
+  .service-image-wrapper.right {
+    order: 1;
+  }
+  
+  .service-content-wrapper {
+    order: 2;
+    padding: 15px;
+  }
+  
+  .service-content-wrapper.left,
+  .service-content-wrapper.right {
+    order: 2;
+  }
+  
+  .service-content h3 {
+    font-size: 1.4rem;
+    margin: 10px 0 8px 0;
+  }
+  
+  .service-content p {
+    font-size: 0.9rem;
+    padding: 0 5px;
+  }
+  
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+    margin: 12px auto 10px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .erp-hero-banner {
+    height: 250px;
+    margin-bottom: 25px;
+  }
+  
+  .erp-hero-title {
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+  
+  .erp-services-container {
+    padding: 10px;
+  }
+  
+  .service-row {
+    margin-bottom: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-image-wrapper {
+    order: 1;
+    height: 160px;
+  }
+  
+  .service-image-wrapper.left,
+  .service-image-wrapper.right {
+    order: 1;
+  }
+  
+  .service-content-wrapper {
+    order: 2;
+    padding: 12px;
+  }
+  
+  .service-content-wrapper.left,
+  .service-content-wrapper.right {
+    order: 2;
+  }
+  
+  .service-content h3 {
+    font-size: 1.3rem;
+    margin: 8px 0 6px 0;
+  }
+  
+  .service-content p {
+    font-size: 0.85rem;
+    padding: 0;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    margin: 12px auto 8px auto;
+  }
+}

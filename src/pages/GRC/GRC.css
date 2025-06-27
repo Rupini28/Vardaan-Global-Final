@@ -1,0 +1,638 @@
+.grc-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 0 0 0;
+  background-color: #f5f7fa;
+  margin-bottom: 0;
+}
+
+.grc-background {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/Products/GRCS.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  margin-bottom: 60px;
+}
+
+/* Removing the entire radial burst effect overlay */
+/* .grc-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-conic-gradient(from 0deg at 25% 50%, 
+    rgba(255, 255, 0, 0.8) 0deg, 
+    rgba(255, 255, 0, 0.4) 2deg, 
+    transparent 3deg, 
+    transparent 6deg
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+} */
+
+/* White dots scattered effect - REMOVED */
+/* .grc-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 3px),
+    radial-gradient(circle at 30% 15%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 45% 25%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 4px),
+    radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 3px),
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 25% 60%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 5px),
+    radial-gradient(circle at 40% 55%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 15% 70%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 3px),
+    radial-gradient(circle at 35% 75%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 50% 65%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 4px),
+    radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 3px),
+    radial-gradient(circle at 65% 45%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 80% 55%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 4px),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 85% 40%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 3px),
+    radial-gradient(circle at 10% 85%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 2px),
+    radial-gradient(circle at 25% 90%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 5px),
+    radial-gradient(circle at 45% 85%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 2px);
+  pointer-events: none;
+  z-index: 2;
+} */
+
+.grc-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.grc-content-box {
+  background-color: white;
+  padding: 40px;
+  width: 40%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-right: 0px;
+}
+
+.grc-institute {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.grc-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  margin: 0 0 30px 0;
+}
+
+.grc-description-container {
+  margin-bottom: 40px;
+}
+
+.grc-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.grc-institute-highlight {
+  color: #0078d4;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 40px;
+}
+
+/* Image Gallery Section */
+.grc-gallery {
+  width: 100%;
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+}
+
+.grc-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.grc-gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.grc-gallery-item:first-child {
+  grid-row: span 2;
+}
+
+.grc-gallery-image {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(0.85); /* Slightly darken images to improve text contrast */
+}
+
+.grc-gallery-item:first-child .grc-gallery-image {
+  height: 600px;
+}
+
+.grc-gallery-item:not(:first-child) .grc-gallery-image {
+  height: 290px;
+}
+
+.grc-gallery-item:hover .grc-gallery-image {
+  transform: scale(1.03);
+}
+
+.grc-gallery-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  color: white;
+  padding: 25px 20px 20px 20px;
+}
+
+/* Ensure text is readable on any background */
+.grc-gallery-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.7));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.grc-gallery-category {
+  font-size: 0.8rem;
+  color: #f0f0f0;
+  margin-bottom: 8px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.grc-gallery-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.grc-gallery-item:not(:first-child) .grc-gallery-title {
+  font-size: 1.1rem;
+}
+
+.grc-gallery-description {
+  font-size: 0.9rem;
+  opacity: 1;
+  line-height: 1.4;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  max-width: 95%;
+}
+
+.grc-gallery-item:not(:first-child) .grc-gallery-description {
+  font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grc-content-box {
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .grc-gallery {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
+
+  .grc-gallery-item:first-child {
+    grid-row: span 1;
+  }
+
+  .grc-gallery-item:first-child .grc-gallery-image,
+  .grc-gallery-item:not(:first-child) .grc-gallery-image {
+    height: 300px;
+  }
+
+  .grc-gallery-title {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grc-background {
+    height: 600px;
+    margin-bottom: 40px;
+  }
+  
+  .grc-content-wrapper {
+    justify-content: center;
+  }
+  
+  .grc-content-box {
+    width: 80%;
+    margin-right: 0;
+  }
+  
+  .grc-title {
+    font-size: 2rem;
+  }
+
+  .grc-gallery {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
+
+  .grc-gallery-item:first-child {
+    grid-row: span 1;
+  }
+
+  .grc-gallery-item:first-child .grc-gallery-image,
+  .grc-gallery-item:not(:first-child) .grc-gallery-image {
+    height: 280px;
+  }
+
+  .grc-gallery-content {
+    padding: 20px 15px 15px 15px;
+  }
+
+  .grc-gallery-title {
+    font-size: 1.1rem;
+  }
+  
+  .grc-gallery-item:not(:first-child) .grc-gallery-title {
+    font-size: 1rem;
+  }
+  
+  .grc-gallery-description {
+    font-size: 0.85rem;
+  }
+  
+  .grc-gallery-item:not(:first-child) .grc-gallery-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grc-background {
+    height: 700px;
+  }
+  
+  .grc-content-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  
+  .grc-title {
+    font-size: 1.8rem;
+  }
+  
+  .grc-description {
+    font-size: 1rem;
+  }
+
+  .grc-gallery-item:first-child .grc-gallery-image,
+  .grc-gallery-item:not(:first-child) .grc-gallery-image {
+    height: 250px;
+  }
+
+  .grc-gallery-content {
+    padding: 15px;
+  }
+}
+
+/* Features Section */
+.grc-features-section {
+  width: 100%;
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.grc-features-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.grc-features-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.grc-features-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.grc-features-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.grc-features-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.grc-features-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grc-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.grc-feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.grc-feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.grc-feature-card:hover::before {
+  left: 100%;
+}
+
+.grc-feature-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.grc-feature-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px auto;
+  font-size: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.grc-feature-title {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.grc-feature-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.grc-key-features {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 50px;
+  text-align: center;
+}
+
+.grc-key-features-title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.grc-key-features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.grc-key-feature-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.grc-key-feature-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.grc-key-feature-icon {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+}
+
+.grc-key-feature-text {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* Responsive Design for Features */
+@media (max-width: 1024px) {
+  .grc-features-section {
+    padding: 80px 30px;
+  }
+
+  .grc-features-title {
+    font-size: 2.5rem;
+  }
+
+  .grc-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grc-features-section {
+    padding: 60px 20px;
+  }
+
+  .grc-features-title {
+    font-size: 2rem;
+  }
+
+  .grc-features-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .grc-feature-card {
+    padding: 30px 20px;
+  }
+
+  .grc-key-features {
+    padding: 30px 20px;
+  }
+
+  .grc-key-features-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grc-features-title {
+    font-size: 1.8rem;
+  }
+}
+
+  .grc-key-features-title {
+    font-size: 1.8rem;
+  }
+
+  .grc-feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+/* Footer spacing fix */
+.footer {
+margin-top: 0 !important;
+position: relative;
+width: 100%;
+}
+
+@media (max-width: 768px) {
+.footer {
+  margin-top: 0 !important;
+}
+}
+
+.grc-tagline {
+font-size: 1.25rem;
+color: #555;
+font-weight: 500;
+margin: 18px 0 24px 0;
+line-height: 1.5;
+text-align: left;
+font-style: italic;
+}
+
+@media (max-width: 768px) {
+.grc-tagline {
+  font-size: 1.05rem;
+  margin: 14px 0 18px 0;
+  text-align: left;
+}
+}
+
+@media (max-width: 480px) {
+.grc-tagline {
+  font-size: 0.98rem;
+  margin: 10px 0 14px 0;
+  text-align: left;
+}
+}

@@ -1,0 +1,315 @@
+.microsoft-services-container {
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Hero Banner Styles */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 640px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 60, 114, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hero-banner-overlay h1,
+.microsoft-services-title {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.microsoft-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.microsoft-service-card {
+  display: flex;
+  background: white;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  border-bottom: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  height: 400px;
+  width: 100%;
+}
+
+/* Different background colors for each service */
+.microsoft-service-card:nth-child(1) {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); /* Light Blue */
+}
+
+.microsoft-service-card:nth-child(2) {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); /* Light Green */
+}
+
+.microsoft-service-card:nth-child(3) {
+  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%); /* Light Yellow */
+}
+
+.microsoft-service-card:nth-child(4) {
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); /* Light Purple */
+}
+
+.microsoft-service-card:nth-child(5) {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%); /* Light Pink */
+}
+
+.microsoft-service-card:nth-child(6) {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%); /* Light Orange */
+}
+
+/* Alternate layout for even-numbered cards (2nd, 4th, 6th) */
+.microsoft-service-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.microsoft-service-card:hover {
+  transform: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.microsoft-service-card:last-child {
+  border-bottom: none;
+}
+
+.microsoft-service-image {
+  flex: 1;
+  width: 50%;
+  height: 400px;
+  min-width: 50%;
+  max-width: 50%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.microsoft-service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.microsoft-service-card:hover .microsoft-service-image img {
+  transform: scale(1.02);
+}
+
+.microsoft-service-content {
+  flex: 1;
+  width: 50%;
+  height: 400px;
+  min-width: 50%;
+  max-width: 50%;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+}
+
+/* Adjust border for even-numbered cards */
+.microsoft-service-card:nth-child(even) .microsoft-service-content {
+  border-left: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.microsoft-service-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.microsoft-service-description {
+  font-size: 1.3rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+  text-align: left;
+}
+
+/* Footer spacing */
+.footer-spacing {
+  height: 60px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-banner {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .microsoft-services-title {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .microsoft-service-card {
+    height: 350px;
+  }
+  
+  .microsoft-service-image {
+    height: 350px;
+    min-width: 50%;
+    max-width: 50%;
+  }
+  
+  .microsoft-service-content {
+    height: 350px;
+    min-width: 50%;
+    max-width: 50%;
+    padding: 45px 40px;
+  }
+  
+  .microsoft-service-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .microsoft-service-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .microsoft-services-title {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  
+  .microsoft-service-card {
+    flex-direction: column;
+    height: 600px;
+  }
+  
+  /* Reset alternating layout for mobile */
+  .microsoft-service-card:nth-child(even) {
+    flex-direction: column;
+  }
+  
+  .microsoft-service-image {
+    width: 100%;
+    height: 300px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .microsoft-service-content {
+    width: 100%;
+    height: 300px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 40px 30px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Reset border for mobile */
+  .microsoft-service-card:nth-child(even) .microsoft-service-content {
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .microsoft-service-title {
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+  
+  .microsoft-service-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    height: 40vh;
+    min-height: 300px;
+  }
+  
+  .microsoft-services-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .microsoft-service-card {
+    height: 550px;
+  }
+  
+  .microsoft-service-image {
+    height: 275px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .microsoft-service-content {
+    height: 275px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 30px 25px;
+  }
+  
+  .microsoft-service-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .microsoft-service-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+} 

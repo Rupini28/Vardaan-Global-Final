@@ -1,0 +1,252 @@
+:root {
+  --color-primary: #1a237e;
+  --color-secondary: #1976d2;
+  --color-accent: #e53935;
+  --color-light-blue: #e3edfa;
+  --color-mid-blue: #6ea8fe;
+  --color-white: #fff;
+  --color-black: #222;
+  --color-gray: #374151;
+  --color-bg: #f8fafc;
+  --color-card: #fff;
+  --color-card-alt: #e3edfa;
+  --color-border: #e3edfa;
+  --color-shadow: rgba(60, 100, 180, 0.08);
+  --color-button-text: #fff;
+  --color-button-outline: #e53935;
+  --color-icon: #1a237e;
+  --color-icon-alt: #fff;
+  --color-portfolio-even: #6ea8fe;
+  --color-portfolio-odd: #1a237e;
+  --color-portfolio-hover: #1976d2;
+  --color-portfolio-header-bg: #1a237e;
+  --color-portfolio-header-text: #fff;
+  --color-gradient-light: #e3edfa;
+  --color-gradient-mid: #b6d0f7;
+  --color-gradient-dark: #4f8ef7;
+  
+  /* Mobile responsive breakpoints */
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+  
+  /* Mobile padding and margins */
+  --mobile-padding-xs: 8px;
+  --mobile-padding-sm: 10px;
+  --mobile-padding-md: 15px;
+  --mobile-padding-lg: 20px;
+  
+  /* Font size scaling */
+  --mobile-font-xs: 0.75rem;
+  --mobile-font-sm: 0.85rem;
+  --mobile-font-md: 0.9rem;
+  --mobile-font-lg: 1rem;
+}
+
+/* Global mobile responsive styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Container responsive styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 8px;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Button responsive styles */
+.btn-responsive {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .btn-responsive {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-responsive {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Image responsive styles */
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text responsive styles */
+.heading-responsive {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.text-responsive {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  line-height: 1.6;
+}
+
+/* Grid responsive styles */
+.grid-responsive {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .grid-responsive {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-responsive {
+    gap: 10px;
+  }
+}
+
+/* Flex responsive styles */
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .flex-responsive {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Card responsive styles */
+.card-responsive {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .card-responsive {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-responsive {
+    padding: 12px;
+  }
+}
+
+/* Section responsive styles */
+.section-responsive {
+  padding: 80px 0;
+}
+
+@media (max-width: 1024px) {
+  .section-responsive {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-responsive {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-responsive {
+    padding: 30px 0;
+  }
+}
+
+/* Utility classes for mobile */
+.mobile-hidden {
+  display: block;
+}
+
+.mobile-visible {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .mobile-visible {
+    display: block !important;
+  }
+}
+
+/* Touch-friendly styles */
+@media (max-width: 768px) {
+  button, 
+  .btn,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+  }
+  
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+}

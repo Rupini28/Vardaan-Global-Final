@@ -1,0 +1,776 @@
+.tfs-techno-financial-services {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+ 
+/* Hero Banner Styles */
+.tfs-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 40px 0;
+}
+ 
+.tfs-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ 
+.tfs-hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 60, 114, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+ 
+.tfs-hero-title {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+ 
+/* New Services Grid Layout */
+.tfs-services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+ 
+.tfs-services-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 100%;
+  height: 280px;
+  margin: 0;
+}
+ 
+.tfs-service-card-image {
+  width: 100%;
+  height: 280px;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.tfs-service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+ 
+.tfs-service-card-image:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+ 
+.tfs-service-card-content {
+  width: 100%;
+  height: 280px;
+  border-radius: 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  background: #ffffff;
+  border: none;
+}
+ 
+.tfs-service-card-content:hover {
+  transform: translateY(-2px);
+}
+ 
+.tfs-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2a3990;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1.2;
+}
+ 
+.tfs-card-description {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #333333;
+  text-align: justify;
+  margin: 0;
+}
+ 
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .tfs-hero-banner {
+    height: 400px;
+  }
+ 
+  .tfs-hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+ 
+  .tfs-hero-content {
+    padding: 25px 40px;
+  }
+ 
+  .tfs-services-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    height: 250px;
+  }
+ 
+  .tfs-service-card-image,
+  .tfs-service-card-content {
+    height: 250px;
+  }
+ 
+  .tfs-service-card-content {
+    padding: 20px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .tfs-hero-banner {
+    height: 350px;
+  }
+ 
+  .tfs-hero-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+ 
+  .tfs-hero-content {
+    padding: 20px 30px;
+  }
+ 
+  .tfs-services-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: auto;
+    margin-bottom: 20px;
+  }
+ 
+  .tfs-service-card-image,
+  .tfs-service-card-content {
+    height: auto;
+    min-height: 200px;
+    width: 100%;
+  }
+ 
+  .tfs-service-card-image {
+    height: 250px;
+    order: 1;
+  }
+ 
+  .tfs-service-card-content {
+    padding: 20px;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+  }
+ 
+  .tfs-service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+  .tfs-techno-financial-services {
+    padding: 0 0 40px 0;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .tfs-hero-banner {
+    height: 300px;
+  }
+ 
+  .tfs-hero-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+ 
+  .tfs-hero-content {
+    padding: 15px 20px;
+  }
+ 
+  .tfs-services-row {
+    margin-bottom: 15px;
+  }
+ 
+  .tfs-service-card-image {
+    height: 220px;
+    min-height: 220px;
+  }
+ 
+  .tfs-service-card-content {
+    padding: 15px;
+    min-height: 120px;
+  }
+ 
+  .tfs-card-title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+ 
+  .tfs-card-description {
+    font-size: 0.8rem;
+  }
+}
+ 
+/* Visit Our Website Section Styles */
+.tfs-website-section {
+  margin: 50px 20px 30px 20px;
+  padding: 25px 30px;
+  background: linear-gradient(270deg, rgba(42, 57, 144, 0.08), rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.06), rgba(236, 72, 153, 0.05));
+  background-size: 400% 400%;
+  border-radius: 20px;
+  border: 1px solid rgba(42, 57, 144, 0.15);
+  box-shadow: 0 8px 32px rgba(42, 57, 144, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: tfs-slideInUp 0.8s ease-out, tfs-morphingGradient 8s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+}
+ 
+.tfs-website-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  animation: tfs-shimmer 4s ease-in-out infinite;
+}
+ 
+.tfs-website-section::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(42, 57, 144, 0.1) 0%, transparent 70%);
+  animation: tfs-rotating-glow 12s linear infinite;
+  z-index: 1;
+}
+ 
+@keyframes tfs-slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+@keyframes tfs-morphingGradient {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+ 
+@keyframes tfs-rotating-glow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+ 
+@keyframes tfs-shimmer {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+ 
+/* Floating Particles Animation */
+.tfs-particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+ 
+.tfs-particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(42, 57, 144, 0.6), rgba(59, 130, 246, 0.4));
+  border-radius: 50%;
+  opacity: 0.7;
+}
+ 
+.tfs-particle-1 {
+  width: 8px;
+  height: 8px;
+  top: 20%;
+  left: 10%;
+  animation: tfs-float-particle 6s ease-in-out infinite, tfs-glow-pulse 3s ease-in-out infinite;
+}
+ 
+.tfs-particle-2 {
+  width: 12px;
+  height: 12px;
+  top: 60%;
+  left: 85%;
+  animation: tfs-float-particle 8s ease-in-out infinite reverse, tfs-glow-pulse 4s ease-in-out infinite 1s;
+}
+ 
+.tfs-particle-3 {
+  width: 6px;
+  height: 6px;
+  top: 80%;
+  left: 20%;
+  animation: tfs-float-particle 7s ease-in-out infinite, tfs-glow-pulse 2.5s ease-in-out infinite 2s;
+}
+ 
+.tfs-particle-4 {
+  width: 10px;
+  height: 10px;
+  top: 30%;
+  left: 70%;
+  animation: tfs-float-particle 9s ease-in-out infinite reverse, tfs-glow-pulse 3.5s ease-in-out infinite 0.5s;
+}
+ 
+.tfs-particle-5 {
+  width: 7px;
+  height: 7px;
+  top: 10%;
+  left: 50%;
+  animation: tfs-float-particle 5s ease-in-out infinite, tfs-glow-pulse 4s ease-in-out infinite 1.5s;
+}
+ 
+.tfs-particle-6 {
+  width: 9px;
+  height: 9px;
+  top: 70%;
+  left: 60%;
+  animation: tfs-float-particle 6.5s ease-in-out infinite reverse, tfs-glow-pulse 2.8s ease-in-out infinite 2.5s;
+}
+ 
+@keyframes tfs-float-particle {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  25% { transform: translateY(-20px) translateX(10px) scale(1.1); }
+  50% { transform: translateY(-15px) translateX(-8px) scale(0.9); }
+  75% { transform: translateY(-25px) translateX(12px) scale(1.05); }
+}
+ 
+@keyframes tfs-glow-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(42, 57, 144, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(42, 57, 144, 0.4); }
+}
+ 
+/* Floating Geometric Shapes */
+.tfs-shapes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+ 
+.tfs-floating-shape {
+  position: absolute;
+  opacity: 0.3;
+}
+ 
+.tfs-shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid rgba(42, 57, 144, 0.6);
+  top: 15%;
+  right: 15%;
+  animation: tfs-float-rotate 10s ease-in-out infinite;
+}
+ 
+.tfs-shape-circle {
+  width: 16px;
+  height: 16px;
+  background: rgba(147, 51, 234, 0.5);
+  border-radius: 50%;
+  top: 25%;
+  left: 15%;
+  animation: tfs-float-bounce 8s ease-in-out infinite;
+}
+ 
+.tfs-shape-square {
+  width: 12px;
+  height: 12px;
+  background: rgba(236, 72, 153, 0.5);
+  transform: rotate(45deg);
+  top: 75%;
+  right: 20%;
+  animation: tfs-float-spin 12s linear infinite;
+}
+ 
+.tfs-shape-hexagon {
+  width: 14px;
+  height: 12px;
+  background: rgba(59, 130, 246, 0.5);
+  position: relative;
+  top: 65%;
+  left: 80%;
+  animation: tfs-float-morph 9s ease-in-out infinite;
+}
+ 
+.tfs-shape-hexagon::before,
+.tfs-shape-hexagon::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+ 
+.tfs-shape-hexagon::before {
+  bottom: 100%;
+  border-bottom: 4px solid rgba(59, 130, 246, 0.5);
+}
+ 
+.tfs-shape-hexagon::after {
+  top: 100%;
+  border-top: 4px solid rgba(59, 130, 246, 0.5);
+}
+ 
+@keyframes tfs-float-rotate {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(180deg); }
+}
+ 
+@keyframes tfs-float-bounce {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  25% { transform: translateY(-12px) scale(1.1); }
+  50% { transform: translateY(-8px) scale(0.95); }
+  75% { transform: translateY(-18px) scale(1.05); }
+}
+ 
+@keyframes tfs-float-spin {
+  0% { transform: rotate(45deg) translateY(0px); }
+  100% { transform: rotate(405deg) translateY(-10px); }
+}
+ 
+@keyframes tfs-float-morph {
+  0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
+  33% { transform: translateY(-10px) scale(1.2) rotate(120deg); }
+  66% { transform: translateY(-5px) scale(0.8) rotate(240deg); }
+}
+ 
+.tfs-website-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+  z-index: 5;
+}
+ 
+.tfs-website-text {
+  font-size: 1.1rem;
+  color: #2a3990;
+  font-weight: 500;
+  line-height: 1.4;
+  position: relative;
+  z-index: 5;
+}
+ 
+/* Typewriter Effect */
+.tfs-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: tfs-expand-width 2s steps(60) 1s both;
+}
+ 
+.tfs-typewriter-text {
+  display: inline-block;
+  animation: tfs-typing 3s steps(60) 1s both, tfs-blink-caret 1s step-end 4s infinite;
+  border-right: 3px solid #2a3990;
+}
+ 
+@keyframes tfs-expand-width {
+  from { max-width: 0; }
+  to { max-width: 100%; }
+}
+ 
+@keyframes tfs-typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+ 
+@keyframes tfs-blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #2a3990; }
+}
+ 
+.tfs-website-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #2a3990 0%, #3b4ba8 100%);
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(42, 57, 144, 0.3), 0 0 0 0 rgba(42, 57, 144, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  animation: tfs-bounceIn 1s ease-out 2s both, tfs-pulse-ring 2s ease-out 3s infinite;
+  z-index: 5;
+}
+ 
+.tfs-button-text {
+  position: relative;
+  z-index: 3;
+}
+ 
+.tfs-button-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  border-radius: 50px;
+  opacity: 0;
+  animation: tfs-glow-sweep 3s ease-in-out infinite 2.5s;
+  z-index: 2;
+}
+ 
+.tfs-website-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+  transform: translateX(-150%);
+  transition: transform 0.8s ease;
+  z-index: 1;
+}
+ 
+.tfs-website-button:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 12px 35px rgba(42, 57, 144, 0.6), 0 0 0 8px rgba(42, 57, 144, 0.1);
+  background: linear-gradient(135deg, #3b4ba8 0%, #4a5bc0 100%);
+  border-color: rgba(255, 255, 255, 0.3);
+  animation: none;
+}
+ 
+.tfs-website-button:hover::before {
+  transform: translateX(150%);
+}
+ 
+.tfs-website-button:hover .tfs-button-glow {
+  opacity: 1;
+  animation: none;
+}
+ 
+.tfs-website-button:active {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(42, 57, 144, 0.5), 0 0 0 4px rgba(42, 57, 144, 0.2);
+}
+ 
+/* Ripple Effect */
+.tfs-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: tfs-ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+ 
+@keyframes tfs-bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-5px);
+  }
+  70% {
+    transform: scale(0.95) translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+ 
+@keyframes tfs-pulse-ring {
+  0% { box-shadow: 0 6px 20px rgba(42, 57, 144, 0.3), 0 0 0 0 rgba(42, 57, 144, 0.4); }
+  50% { box-shadow: 0 6px 20px rgba(42, 57, 144, 0.3), 0 0 0 6px rgba(42, 57, 144, 0.1); }
+  100% { box-shadow: 0 6px 20px rgba(42, 57, 144, 0.3), 0 0 0 0 rgba(42, 57, 144, 0); }
+}
+ 
+@keyframes tfs-glow-sweep {
+  0%, 100% { opacity: 0; transform: translateX(-100%); }
+  50% { opacity: 1; transform: translateX(100%); }
+}
+ 
+@keyframes tfs-ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+ 
+@keyframes tfs-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+/* Responsive styles for website section */
+@media (max-width: 1200px) {
+  .tfs-website-section {
+    margin: 40px 15px 25px 15px;
+    padding: 20px 25px;
+  }
+ 
+  .tfs-website-content {
+    gap: 25px;
+  }
+ 
+  .tfs-website-text {
+    font-size: 1rem;
+  }
+ 
+  .tfs-website-button {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .tfs-website-section {
+    margin: 30px 10px 20px 10px;
+    padding: 18px 20px;
+  }
+ 
+  .tfs-website-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+ 
+  .tfs-website-text {
+    font-size: 0.95rem;
+  }
+ 
+  .tfs-typewriter {
+    white-space: normal;
+    animation: none;
+  }
+ 
+  .tfs-typewriter-text {
+    animation: tfs-fadeInUp 1s ease-out 0.5s both;
+    border-right: none;
+  }
+ 
+  .tfs-website-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+ 
+  .tfs-particle {
+    display: none;
+  }
+ 
+  .tfs-floating-shape {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+}
+ 
+@media (max-width: 480px) {
+  .tfs-website-section {
+    margin: 25px 10px 15px 10px;
+    padding: 15px 18px;
+  }
+ 
+  .tfs-website-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+ 
+  .tfs-website-text {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+ 
+  .tfs-typewriter {
+    white-space: normal;
+    animation: none;
+  }
+ 
+  .tfs-typewriter-text {
+    animation: tfs-fadeInUp 1s ease-out 0.3s both;
+    border-right: none;
+  }
+ 
+  .tfs-website-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+ 
+  .tfs-particle,
+  .tfs-floating-shape {
+    display: none;
+  }
+}
+ 

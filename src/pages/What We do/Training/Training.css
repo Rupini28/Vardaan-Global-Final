@@ -1,0 +1,588 @@
+/* Training Container */
+.training-container {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.training-hero {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  min-height: 640px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.training-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 60, 114, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hero-overlay h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.training-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.training-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 20px 0 0 0;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Content Area */
+.training-content {
+  max-width: 100%;
+  margin: 0;
+  padding: 60px 0 0;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin: 40px 20px 30px;
+  background: transparent;
+}
+
+.section-training-title {
+  font-size: 2.2rem;
+  color: #000000;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  background: transparent;
+}
+
+.certnexus-logo-img {
+  height: 40px;
+  width: auto;
+  margin-left: 15px;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.certnexus-logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.section-line {
+  width: 80px;
+  height: 3px;
+  background: #2c5aa0;
+  margin: 15px auto;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #666666;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Vardaan Courses - Badge Design */
+.vardaan-section {
+  background-image: url('../../../assets/images/Training/Courses background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  position: relative;
+}
+
+.vardaan-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.65);
+  z-index: 1;
+}
+
+.vardaan-section .section-header,
+.vardaan-section .courses-flow {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.courses-flow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 30px 0 0;
+  flex-wrap: wrap;
+}
+
+.course-badge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px 30px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  max-width: 300px;
+}
+
+.course-badge:hover {
+  transform: translateY(-8px);
+}
+
+.course-badge.hovered {
+  transform: translateY(-8px);
+}
+
+.badge-logo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+  margin-left: -20px;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.badge-logo:hover {
+  filter: drop-shadow(0 8px 20px rgba(44, 90, 160, 0.3));
+  transform: scale(1.05);
+}
+
+.course-badge.hovered .badge-logo {
+  filter: drop-shadow(0 8px 20px rgba(44, 90, 160, 0.3));
+  transform: scale(1.05);
+}
+
+.badge-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+  padding: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.course-badge:hover .badge-logo img {
+  box-shadow: 0 12px 35px rgba(44, 90, 160, 0.2);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+}
+
+.course-badge.hovered .badge-logo img {
+  box-shadow: 0 12px 35px rgba(44, 90, 160, 0.2);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+}
+
+.badge-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+
+.badge-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c5aa0;
+  margin: 0 auto 9px !important;
+  line-height: 1.3;
+  transition: all 0.3s ease;
+  text-align: center !important;
+  width: 100% !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.course-badge:hover .badge-title {
+  color: #1a4080;
+}
+
+.course-badge.hovered .badge-title {
+  color: #1a4080;
+}
+
+.badge-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666666;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.course-badge:hover .badge-subtitle {
+  color: #2c5aa0;
+}
+
+.course-badge.hovered .badge-subtitle {
+  color: #2c5aa0;
+}
+
+/* Add a subtle background pattern for each badge */
+.course-badge::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(44, 90, 160, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.course-badge:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.course-badge.hovered::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* CertNexus Courses - Image-based Cards Layout */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin: 40px 0 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.course-card {
+  position: relative;
+  height: 470px;
+  border-radius: 0;
+  overflow: hidden;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: none;
+  border: none;
+}
+
+.course-card:hover {
+  transform: scale(1.02);
+  box-shadow: none;
+}
+
+.course-card.hovered {
+  transform: scale(1.02);
+  box-shadow: none;
+}
+
+.course-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(44, 90, 160, 0.3) 0%,
+    rgba(26, 64, 128, 0.4) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.course-card:hover .course-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(44, 90, 160, 0.5) 0%,
+    rgba(26, 64, 128, 0.6) 100%
+  );
+}
+
+.course-card.hovered .course-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(44, 90, 160, 0.5) 0%,
+    rgba(26, 64, 128, 0.6) 100%
+  );
+}
+
+.course-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.course-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 15px;
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+}
+
+.course-description {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+/* Legacy styles - keeping for backwards compatibility but not used */
+.course-item {
+  display: none;
+}
+
+.course-marker {
+  display: none;
+}
+
+.course-details {
+  display: none;
+}
+
+.course-code {
+  display: none;
+}
+
+.course-arrow {
+  display: none;
+}
+
+/* Add spacing between certnexus section and footer */
+.certnexus-section {
+  margin-bottom: 100px;
+  background: transparent;
+}
+
+.certnexus-section .section-header {
+  background: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .training-hero {
+    height: 640px;
+    min-height: 640px;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 3rem;
+  }
+  
+  .training-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .courses-flow {
+    gap: 30px;
+  }
+  
+  .badge-logo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .training-hero {
+    height: 640px;
+    min-height: 500px;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .training-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-header {
+    margin: 40px 15px 30px;
+  }
+  
+  .certnexus-logo-img {
+    height: 35px;
+    margin-left: 10px;
+  }
+  
+  .vardaan-section {
+    padding: 20px 0;
+  }
+  
+  .courses-flow {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0 0;
+  }
+  
+  .course-badge {
+    max-width: 280px;
+  }
+  
+  .badge-logo {
+    width: 170px;
+    height: 170px;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 30px 0 0;
+  }
+  
+  .course-card {
+    height: 400px;
+    border-radius: 0;
+  }
+  
+  .course-overlay {
+    padding: 25px;
+  }
+  
+  .course-title {
+    font-size: 2rem;
+    margin: 0 0 12px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  .course-description {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  .training-hero {
+    height: 640px;
+    min-height: 400px;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .training-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-header {
+    margin: 30px 10px 20px;
+  }
+  
+  .vardaan-section {
+    padding: 15px 0;
+  }
+  
+  .certnexus-logo-img {
+    height: 30px;
+    margin-left: 8px;
+  }
+  
+  .badge-logo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .badge-title {
+    font-size: 1.2rem;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto 9px !important;
+  }
+  
+  .badge-subtitle {
+    font-size: 1rem;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  
+  .course-card {
+    height: 380px;
+    border-radius: 0;
+  }
+  
+  .course-overlay {
+    padding: 20px;
+  }
+  
+  .course-title {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  .course-description {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+} 

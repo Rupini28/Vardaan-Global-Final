@@ -1,0 +1,373 @@
+.data-strategy-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Hero Banner Styles */
+.data-strategy-hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  min-height: 640px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 60, 114, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.data-strategy-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.data-strategy-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+.strategy-services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.strategy-service-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  min-height: 500px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.strategy-service-row:hover {
+  transform: translateY(-2px);
+}
+
+/* Reverse layout for alternating rows */
+.strategy-service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Specific background colors for each row - creating box effect */
+.strategy-service-row:nth-child(1) .strategy-service-image {
+  background: #8FBC8F;
+}
+
+.strategy-service-row:nth-child(1) .strategy-service-content {
+  background: #D2B48C;
+  color: #2d3748;
+}
+
+.strategy-service-row:nth-child(2) .strategy-service-content {
+  background: #4682B4;
+  color: #ffffff;
+}
+
+.strategy-service-row:nth-child(2) .strategy-service-image {
+  background: #87CEEB;
+}
+
+.strategy-service-row:nth-child(3) .strategy-service-image {
+  background: #20B2AA;
+}
+
+.strategy-service-row:nth-child(3) .strategy-service-content {
+  background: #98FB98;
+  color: #2d3748;
+}
+
+.strategy-service-row:nth-child(4) .strategy-service-content {
+  background: #9370DB;
+  color: #ffffff;
+}
+
+.strategy-service-row:nth-child(4) .strategy-service-image {
+  background: #DDA0DD;
+}
+
+.strategy-service-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.strategy-service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.strategy-service-image:hover img {
+  transform: scale(1.05);
+}
+
+.strategy-service-content {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.strategy-service-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  line-height: 1.3;
+  position: relative;
+  color: inherit;
+}
+
+.strategy-service-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.strategy-service-description {
+  color: inherit;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.strategy-paragraph {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.strategy-paragraph::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.strategy-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Hover effects for content */
+.strategy-service-row:hover .strategy-service-title {
+  color: #1a2875;
+}
+
+.strategy-service-row:hover .strategy-paragraph {
+  color: #2d3748;
+}
+
+/* Footer spacing */
+.footer-spacing {
+  height: 80px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .data-strategy-hero {
+    height: 60vh;
+    min-height: 500px;
+  }
+  
+  .data-strategy-title {
+    font-size: 3rem;
+  }
+  
+  .strategy-service-row {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .strategy-service-row.reverse {
+    flex-direction: column;
+  }
+  
+  .strategy-service-image {
+    height: 300px;
+    width: 100%;
+  }
+  
+  .strategy-service-content {
+    padding: 40px 30px;
+    width: 100%;
+  }
+  
+  .strategy-service-title::after {
+    width: 40px;
+  }
+  
+  .footer-spacing {
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .data-strategy-container {
+    padding: 0;
+  }
+  
+  .data-strategy-hero {
+    height: 55vh;
+    min-height: 400px;
+  }
+  
+  .data-strategy-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .data-strategy-title::after {
+    width: 80px;
+  }
+  
+  .strategy-services-grid {
+    gap: 0;
+  }
+  
+  .strategy-service-row {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .strategy-service-image {
+    height: 250px;
+  }
+  
+  .strategy-service-image img {
+    height: 100%;
+  }
+  
+  .strategy-service-title {
+    font-size: 1.6rem;
+  }
+  
+  .strategy-service-description {
+    font-size: 0.95rem;
+  }
+  
+  .footer-spacing {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-strategy-hero {
+    height: 45vh;
+    min-height: 350px;
+  }
+  
+  .data-strategy-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .data-strategy-title::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .strategy-service-row {
+    margin-bottom: 0;
+  }
+  
+  .strategy-service-image {
+    height: 200px;
+  }
+  
+  .strategy-service-title {
+    font-size: 1.4rem;
+  }
+  
+  .strategy-service-description {
+    padding: 0;
+  }
+  
+  .strategy-paragraph {
+    font-size: 0.9rem;
+  }
+  
+  .footer-spacing {
+    height: 40px;
+  }
+} 

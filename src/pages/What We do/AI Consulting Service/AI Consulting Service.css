@@ -1,0 +1,532 @@
+/* Dynamic styling based on whether there's a background image */
+.service-detail-container[data-has-image="true"] .service-detail-content,
+.mobile-service-detail[data-has-image="true"] .service-detail-content {
+  color: white;
+}
+
+.service-detail-container[data-has-image="true"] .service-detail-icon,
+.mobile-service-detail[data-has-image="true"] .service-detail-icon {
+  color: white;
+}
+
+.service-detail-container[data-has-image="true"] .service-detail-title,
+.mobile-service-detail[data-has-image="true"] .service-detail-title,
+.mobile-service-detail[data-has-image="true"] .mobile-service-title {
+  color: white;
+}
+
+.service-detail-container[data-has-image="true"] .service-detail-description,
+.mobile-service-detail[data-has-image="true"] .service-detail-description {
+  color: white;
+}
+
+.service-detail-container[data-has-image="false"] .service-detail-content,
+.mobile-service-detail[data-has-image="false"] .service-detail-content {
+  color: #14213d;
+}
+
+.service-detail-container[data-has-image="false"] .service-detail-icon,
+.mobile-service-detail[data-has-image="false"] .service-detail-icon {
+  color: #2a3990;
+}
+
+.service-detail-container[data-has-image="false"] .service-detail-title,
+.mobile-service-detail[data-has-image="false"] .service-detail-title,
+.mobile-service-detail[data-has-image="false"] .mobile-service-title {
+  color: #14213d;
+}
+
+.service-detail-container[data-has-image="false"] .service-detail-description,
+.mobile-service-detail[data-has-image="false"] .service-detail-description {
+  color: #4f5d75;
+  background: rgba(255, 255, 255, 0.8);
+  text-shadow: none;
+}
+
+/* Hero Banner Section */
+.ai-consulting-hero-banner {
+  position: relative;
+  width: 100vw;
+  height: 75vh;
+  min-height: 640px;
+  margin: -40px 0 60px 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  transform: none;
+}
+
+.ai-consulting-hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.ai-consulting-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ai-consulting-hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  background: rgba(30, 60, 114, 0.6);
+}
+
+.ai-consulting-hero-content h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Main Container */
+.ai-consulting-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 0 50px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Services Showcase Layout */
+.services-showcase {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  min-height: 600px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Left Navigation Panel */
+.services-nav {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+/* Service Items (Left Side) */
+.service-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-item.active {
+  background-color: #f8f9fa;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #e63946;
+}
+
+/* Service Navigation Icon */
+.service-nav-icon {
+  font-size: 1.5rem;
+  color: #2a3990;
+  transition: all 0.3s ease;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0;
+}
+
+.service-item:hover .service-nav-icon,
+.service-item.active .service-nav-icon {
+  color: #e63946;
+  transform: scale(1.1);
+}
+
+/* Service Navigation Title - NEVER DISAPPEARS */
+.service-nav-title {
+  font-weight: 600 !important;
+  color: #14213d !important;
+  font-size: 0.95rem !important;
+  transition: color 0.3s ease !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  flex: 1 !important;
+}
+
+.service-item:hover .service-nav-title {
+  color: #e63946 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.service-item.active .service-nav-title {
+  color: #e63946 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Right Detail Panel */
+.service-detail-container {
+  width: 65%;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  height: 500px;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.service-detail-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.service-detail-bg img {
+  opacity: 0.6;
+  transition: none !important;
+}
+
+.service-detail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.service-detail-content {
+  text-align: center;
+  max-width: 70%;
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.service-detail-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.service-detail-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.service-detail-line {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #e63946, #2a3990);
+  margin: 0 auto 20px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-detail-description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  background: transparent;
+  padding: 0;
+  border-radius: 8px;
+  color: white;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile Stacked Services Styles */
+.mobile-stacked-services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mobile-service-card {
+  width: 100%;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.mobile-service-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-service-header .service-nav-icon {
+  font-size: 1.8rem;
+  color: #2a3990;
+}
+
+.mobile-service-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #14213d;
+  margin: 0;
+}
+
+.mobile-service-detail {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.mobile-service-detail .service-detail-content {
+  padding: 25px 20px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.mobile-service-detail .service-detail-description {
+  -webkit-line-clamp: 4;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .ai-consulting-hero-banner {
+    height: 350px;
+    margin: -40px 0 40px 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  .ai-consulting-hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .ai-consulting-container {
+    padding: 40px 0 70px;
+  }
+
+  .services-showcase {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+    margin-bottom: 25px;
+  }
+  
+  .services-nav {
+    width: 100%;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .service-detail-container {
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
+  }
+
+  /* Mobile View Specific */
+  .services-showcase.mobile-view {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-consulting-hero-banner {
+    height: 300px;
+    margin: -40px 0 30px 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 0;
+  }
+
+  .ai-consulting-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .ai-consulting-container {
+    padding: 40px 0 80px;
+  }
+
+  .services-showcase {
+    margin-bottom: 30px;
+  }
+  
+  .services-nav {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-detail-title {
+    font-size: 1.5rem;
+  }
+  
+  .service-detail-description {
+    font-size: 0.95rem;
+  }
+  
+  .service-detail-container {
+    height: 320px;
+    min-height: 320px;
+  }
+
+  /* Small Mobile View Specific */
+  .services-showcase.small-mobile-view {
+    gap: 25px;
+    padding: 0 10px;
+  }
+  
+  .mobile-service-card {
+    border-radius: 10px;
+  }
+  
+  .mobile-service-header {
+    padding: 15px;
+  }
+  
+  .mobile-service-title {
+    font-size: 1.2rem;
+  }
+  
+  .mobile-service-detail {
+    height: 200px;
+  }
+  
+  .mobile-service-detail .service-detail-content {
+    padding: 20px 15px;
+  }
+  
+  .mobile-service-detail .service-detail-line {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-consulting-hero-banner {
+    height: 250px;
+    margin: -40px 0 30px 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  .ai-consulting-hero-content h1 {
+    font-size: 2rem;
+    padding: 0 15px;
+  }
+
+  .ai-consulting-container {
+    padding: 40px 0 90px;
+    overflow-x: hidden;
+  }
+
+  .services-showcase {
+    margin-bottom: 35px;
+    padding: 0 5px;
+  }
+
+  /* Extra Small Mobile Adjustments */
+  .mobile-service-header {
+    padding: 12px 15px;
+  }
+  
+  .mobile-service-title {
+    font-size: 1.1rem;
+  }
+  
+  .mobile-service-detail {
+    height: 180px;
+  }
+  
+  .mobile-service-detail .service-detail-content {
+    padding: 15px;
+    max-width: 95%;
+  }
+  
+  .mobile-service-detail .service-detail-line {
+    margin-bottom: 12px;
+    height: 3px;
+  }
+  
+  .mobile-service-detail .service-detail-description {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 5;
+  }
+}
+
+/* Add this at the end of the file to override footer styles */
+.ai-consulting-container .footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
+  left: 0;
+  transform: none;
+}
+
+/* Fix for horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}

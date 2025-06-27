@@ -1,0 +1,21 @@
+{
+  "name": "vg-website-backend",
+  "version": "1.0.0",
+  "description": "Firebase backend services for VG Website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "firebase",
+    "firestore",
+    "contact-form",
+    "backend"
+  ],
+  "author": "VG Website Team",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.7.1"
+  }
+} 
