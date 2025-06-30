@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaChevronDown, FaPhoneAlt, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import { Link, withRouter } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/Vardaan Global.png";
+import logo from "../assets/Home/Vardaan Global.png";
 
 const Navbar = ({ history, location }) => {
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);

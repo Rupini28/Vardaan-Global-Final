@@ -21,11 +21,11 @@ import CybersecurityServices from "./pages/Our Service Offerings/Cybersecurity S
 import CustomEngineeringServices from "./pages/Our Service Offerings/Custom Engineering Services/Custom Engineering Services";
 import GetInTouch from "./pages/Contact Us/Contact Us";
 import AboutVardaan from "./pages/About Vardaan/About Vardaan";
-import Privacy from "./pages/Privacy/Privacy";
-import Cookie from "./pages/Cookie/Cookie";
-import Terms from "./pages/Terms/Terms";
-import Data from "./pages/Data/Data";
-import International from "./pages/International/International";
+import Privacy from "./pages/Information/Privacy/Privacy";
+import Cookie from "./pages/Information/Cookie/Cookie";
+import Terms from "./pages/Information/Terms/Terms";
+import Data from "./pages/Information/Data/Data";
+import International from "./pages/Information/International/International";
 import "./theme.css"; // if you want consistent styling
 import ScrollToTop from './components/ScrollToTop';
 

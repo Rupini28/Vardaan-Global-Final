@@ -1,17 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Lapsec.css";
-import lapsecVideo from "../../../assets/Products/lapsec.mp4";
-import lapsecImg1 from "../../../assets/Products/lapsec.jpg";
-import lapsecImg2 from "../../../assets/Products/lapsec 1.jpg";
-import lapsecImg3 from "../../../assets/Products/lapsec 2.webp";
-import lapsecFeaturesImg from "../../../assets/Products/lapsec 4.webp";
-import lapsecBenefit1 from "../../../assets/Products/lapsec 5.jpg";
-import lapsecBenefit2 from "../../../assets/Products/lapsec 6.jpeg";
-import lapsecBenefit3 from "../../../assets/Products/lapsec 7.jpg";
-import lapsecBenefit4 from "../../../assets/Products/lapsec 8.jpg";
-import lapsecBenefit5 from "../../../assets/Products/lapsec 9.avif";
-import lapsecBenefit6 from "../../../assets/Products/lapsec 10.jpg";
-import lapsecBenefit7 from "../../../assets/Products/lapsec 11.png";
+import lapsecVideo from "../../../assets/Products/Lapsec/lapsec.mp4";
+import lapsecImg1 from "../../../assets/Products/Lapsec/lapsec.jpg";
+import lapsecImg2 from "../../../assets/Products/Lapsec/lapsec 1.jpg";
+import lapsecImg3 from "../../../assets/Products/Lapsec/lapsec 2.webp";
+import lapsecBenefit1 from "../../../assets/Products/Lapsec/lapsec 5.jpg";
+import lapsecBenefit2 from "../../../assets/Products/Lapsec/lapsec 6.jpeg";
+import lapsecBenefit3 from "../../../assets/Products/Lapsec/lapsec 7.jpg";
+import lapsecBenefit4 from "../../../assets/Products/Lapsec/lapsec 8.jpg";
+import lapsecBenefit5 from "../../../assets/Products/Lapsec/lapsec 9.avif";
+import lapsecBenefit6 from "../../../assets/Products/Lapsec/lapsec 10.jpg";
 import Footer from "../../../components/Footer";
 
 const Lapsec = () => {

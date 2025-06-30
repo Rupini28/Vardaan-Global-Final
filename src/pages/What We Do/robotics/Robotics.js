@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Robotics.css";
 // Try with a direct import path
-import roboticsVideo from "../../../assets/Products/robotics.mp4";
-import robotics1 from "../../../assets/Products/robotics 1.webp";
-import robotics2 from "../../../assets/Products/robotics 2.webp";
-import robotics3 from "../../../assets/Products/robotics 3.webp";
-import apaImage from "../../../assets/Products/apa.jpg";
+import roboticsVideo from "../../../assets/Products/Robotics/robotics.mp4";
+import robotics1 from "../../../assets/Products/Robotics/robotics 1.webp";
+import robotics2 from "../../../assets/Products/Robotics/robotics 2.webp";
+import robotics3 from "../../../assets/Products/Robotics/robotics 3.webp";
+import apaImage from "../../../assets/Products/Robotics/apa.jpg";
 import Footer from "../../../components/Footer";
 
 const Robotics = () => {

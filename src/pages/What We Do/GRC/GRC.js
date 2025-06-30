@@ -1,9 +1,9 @@
 import React from "react";
 import "./GRC.css";
-import GRCImage from "../../../assets/Products/GRCS.jpg";
-import GRCImage1 from "../../../assets/Products/grc 1.webp"
-import GRCImage2 from "../../../assets/Products/grc 2.jpg";
-import GRCImage3 from "../../../assets/Products/grc 3.jpeg";
+import GRCImage from "../../../assets/Products/GRC/GRCS.jpg";
+import GRCImage1 from "../../../assets/Products/GRC/grc 1.webp"
+import GRCImage2 from "../../../assets/Products/GRC/grc 2.jpg";
+import GRCImage3 from "../../../assets/Products/GRC/grc 3.jpeg";
 import Footer from "../../../components/Footer";
 
 const GRC = () => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Terms.css';
-import Footer from '../../components/Footer';
+import Footer from '../../../components/Footer';
 
 const Terms = () => {
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Cookie.css';
-import Footer from '../../components/Footer';
+import Footer from '../../../components/Footer';
 
 const Cookie = () => {
   useEffect(() => {

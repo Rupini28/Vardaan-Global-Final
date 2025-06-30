@@ -70,7 +70,7 @@ body {
   left: 50%;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(30, 80, 200, 0.18), rgba(80, 150, 255, 0.12)), url('/src/assets/herobg.jpeg') center center/cover no-repeat;
+  background: linear-gradient(rgba(30, 80, 200, 0.18), rgba(80, 150, 255, 0.12)), url('/src/assets/Home/herobg.jpeg') center center/cover no-repeat;
   z-index: 1;
   transform: translateX(-50%);
   pointer-events: none;

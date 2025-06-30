@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './International.css';
-import Footer from '../../components/Footer';
+import Footer from '../../../components/Footer';
 
 const International = () => {
   useEffect(() => {

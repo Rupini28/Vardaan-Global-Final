@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.css";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaArrowUp } from "react-icons/fa";
-import logo from "../assets/logo.png";
-import footerVideo from "../assets/footer.mp4";
+import logo from "../assets/Home/Vardaan Global.png";
+import footerVideo from "../assets/Home/footer.mp4";
 import emailjs from '@emailjs/browser';
 
 const Footer = () => {

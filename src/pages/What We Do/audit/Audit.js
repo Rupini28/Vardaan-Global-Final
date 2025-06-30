@@ -1,11 +1,11 @@
 import React from "react";
 import "./Audit.css";
-import auditImage from "../../../assets/Products/audit.webp";
-import auditIcon1 from "../../../assets/Products/audit 1.png";
-import auditIcon2 from "../../../assets/Products/audit 2.webp";
-import auditIcon3 from "../../../assets/Products/audit 3.jpg";
-import auditIcon4 from "../../../assets/Products/audit 4.jpg";
-import auditVideo from "../../../assets/Audit.mp4";
+import auditImage from "../../../assets/Products/ProSync/audit.webp";
+import auditIcon1 from "../../../assets/Products/ProSync/audit 1.png";
+import auditIcon2 from "../../../assets/Products/ProSync/audit 2.webp";
+import auditIcon3 from "../../../assets/Products/ProSync/audit 3.jpg";
+import auditIcon4 from "../../../assets/Products/ProSync/audit 4.jpg";
+import auditVideo from "../../../assets/Home/Audit.mp4";
 import Footer from "../../../components/Footer";
 
 const Audit = () => {

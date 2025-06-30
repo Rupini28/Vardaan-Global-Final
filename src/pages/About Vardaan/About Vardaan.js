@@ -7,7 +7,6 @@ import prem from '../../assets/images/About Vardaan/prem.png';
 // import susheel from '../../assets/videos/susheel.png';
 import gopakumar from '../../assets/images/About Vardaan/Gopa Sir.JPG';
 import leadershipBanner from '../../assets/images/About Vardaan/About vardaan background.jpg';
-import missionImg from '../../assets/mission.jpg';
 import React, { useEffect, useState, useRef } from 'react';
 import Footer from '../../components/Footer';
 
@@ -353,11 +352,7 @@ const Leadership = () => {
             <WebsiteImpactAnimatedDescription text="Our deep strategic insight into the drivers of enterprise growth enables us to help clients achieve secured operations, operational excellence, compliance readiness, and scalable innovation." />
             <WebsiteImpactAnimatedDescription text="Our portfolio includes AI-powered tools and intelligent platforms—ranging from GRC intelligence platforms and smart logistics systems to audit management suites, camera vision AI, digital workers, robotic automation, and cybersecurity solutions—all designed to deliver actionable insights and measurable business impact." />
           </div>
-          <div className="website-impact-right">
-            <div className="website-impact-image-diagonal">
-              <img src={missionImg} alt="Our Mission" className="website-impact-img" />
-            </div>
-          </div>
+          
         </div>
       </section>
       
