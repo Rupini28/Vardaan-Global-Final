@@ -198,10 +198,6 @@ const Terms = () => {
               Material changes get 30 days' notice.
             </p>
           </section>
-
-          <div className="policy-footer">
-            <p><strong>Effective:</strong> [Insert Date] | <strong>Version:</strong> 1.0</p>
-          </div>
         </div>
       </div>
       <Footer />

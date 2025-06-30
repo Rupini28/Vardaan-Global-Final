@@ -361,10 +361,6 @@ const Data = () => {
               <strong>Notification:</strong> Email and website notice 30 days before major changes take effect.
             </p>
           </section>
-
-          <div className="policy-footer">
-            <p><strong>Effective Date:</strong> [Insert Date] | <strong>Version:</strong> 1.0</p>
-          </div>
         </div>
       </div>
       <Footer />

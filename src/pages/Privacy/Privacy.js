@@ -14,8 +14,7 @@ const Privacy = () => {
           <h1>Privacy Policy</h1>
           <h2>Vardaan Global</h2>
           <div className="policy-dates">
-            <p><strong>Effective Date:</strong> [Insert Date]</p>
-            <p><strong>Last Updated:</strong> [Insert Date]</p>
+            {/* Removed Effective Date and Last Updated section */}
           </div>
         </div>
 
@@ -401,18 +400,6 @@ const Privacy = () => {
               <li>Storage limitation</li>
             </ul>
           </section>
-
-          <div className="policy-footer">
-            <p><strong>Last Updated:</strong> [Insert Date]</p>
-            <p><strong>Version:</strong> 1.0</p>
-            <p>
-              For the most current version of this Privacy Policy, please visit: [Insert website URL/privacy]
-            </p>
-            <p>
-              This Privacy Policy is available in multiple languages. In case of conflicts between versions, 
-              the English version shall prevail.
-            </p>
-          </div>
         </div>
       </div>
       <Footer />

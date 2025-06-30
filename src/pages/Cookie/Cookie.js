@@ -13,9 +13,6 @@ const Cookie = () => {
         <div className="cookie-header">
           <h1>Cookie Policy</h1>
           <h2>Vardaan Global</h2>
-          <div className="policy-dates">
-            <p><strong>Last Updated:</strong> [Insert Date]</p>
-          </div>
         </div>
 
         <div className="cookie-content">
@@ -197,11 +194,6 @@ const Cookie = () => {
             </ul>
             <p>Continued use means you accept any updates.</p>
           </section>
-
-          <div className="policy-footer">
-            <p><strong>Effective Date:</strong> [Insert Date]</p>
-            <p><strong>Version:</strong> 1.0</p>
-          </div>
         </div>
       </div>
       <Footer />

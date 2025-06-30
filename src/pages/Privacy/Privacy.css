@@ -1,12 +1,15 @@
 .privacy-page {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: #ffffff;
-  padding: 100px 0 50px;
+  padding: 100px 0 0;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .privacy-container {
+  flex: 1 0 auto;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -37,20 +40,8 @@
 }
 
 .policy-dates {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.policy-dates p {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 25px;
-  margin: 0;
-  font-size: 0.95rem;
-  border: 1px solid rgba(195, 139, 63, 0.3);
+  /* Removed as policy-dates section is no longer used */
+  display: none;
 }
 
 .privacy-content {

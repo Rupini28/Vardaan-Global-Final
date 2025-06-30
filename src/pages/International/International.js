@@ -369,10 +369,6 @@ const International = () => {
               </div>
             </div>
           </section> */}
-
-          <div className="policy-footer">
-            <p><strong>Effective Date:</strong> [Insert Date] | <strong>Version:</strong> 1.0</p>
-          </div>
         </div>
       </div>
       <Footer />

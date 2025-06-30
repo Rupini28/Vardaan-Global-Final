@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Robotics.css";
 // Try with a direct import path
-import roboticsVideo from "../../assets/Products/robotics.mp4";
-import robotics1 from "../../assets/Products/robotics 1.webp";
-import robotics2 from "../../assets/Products/robotics 2.webp";
-import robotics3 from "../../assets/Products/robotics 3.webp";
-import apaImage from "../../assets/Products/apa.jpg";
-import Footer from "../../components/Footer";
+import roboticsVideo from "../../../assets/Products/robotics.mp4";
+import robotics1 from "../../../assets/Products/robotics 1.webp";
+import robotics2 from "../../../assets/Products/robotics 2.webp";
+import robotics3 from "../../../assets/Products/robotics 3.webp";
+import apaImage from "../../../assets/Products/apa.jpg";
+import Footer from "../../../components/Footer";
 
 const Robotics = () => {
   // Log the video source to check if it's imported correctly

@@ -1,12 +1,15 @@
 .cookie-page {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: #ffffff;
-  padding: 100px 0 50px;
+  padding: 100px 0 0;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cookie-container {
+  flex: 1 0 auto;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -34,23 +37,6 @@
   font-weight: 600;
   margin-bottom: 25px;
   letter-spacing: 0.5px;
-}
-
-.policy-dates {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.policy-dates p {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 25px;
-  margin: 0;
-  font-size: 0.95rem;
-  border: 1px solid rgba(195, 139, 63, 0.3);
 }
 
 .cookie-content {
@@ -270,45 +256,6 @@
   text-align: center;
 }
 
-/* Rights Notice */
-.rights-notice {
-  background: rgba(195, 139, 63, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
-  border-left: 4px solid #c38b3f;
-}
-
-.rights-notice p {
-  margin-bottom: 10px;
-  color: #ffffff;
-  text-align: left;
-}
-
-.rights-notice p:last-child {
-  margin-bottom: 0;
-}
-
-.policy-footer {
-  text-align: center;
-  margin-top: 60px;
-  padding: 40px 30px;
-  background: rgba(195, 139, 63, 0.1);
-  border-radius: 15px;
-  border: 2px solid rgba(195, 139, 63, 0.3);
-}
-
-.policy-footer p {
-  margin-bottom: 15px;
-  color: #e0e0e0;
-  font-size: 0.95rem;
-}
-
-.policy-footer p:last-child {
-  margin-bottom: 0;
-  font-style: italic;
-}
-
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
   .cookie-container {
@@ -350,12 +297,6 @@
     font-size: 1.3rem;
   }
   
-  .policy-dates {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  
   .cookie-section {
     padding: 20px;
     margin-bottom: 35px;
@@ -385,11 +326,6 @@
   .browser-controls {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
-  }
-  
-  .policy-footer {
-    padding: 30px 20px;
-    margin-top: 50px;
   }
 }
 
@@ -454,18 +390,6 @@
   
   .browser-controls {
     grid-template-columns: 1fr;
-  }
-  
-  .rights-notice {
-    padding: 15px;
-  }
-  
-  .policy-footer {
-    padding: 20px 15px;
-  }
-  
-  .policy-footer p {
-    font-size: 0.9rem;
   }
 }
 

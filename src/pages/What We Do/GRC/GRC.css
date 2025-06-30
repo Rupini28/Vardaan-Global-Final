@@ -17,7 +17,7 @@
   width: 100%;
   max-width: 1400px;
   height: 500px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/Products/GRCS.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../../assets/Products/GRCS.jpg');
   background-size: cover;
   background-position: center;
   display: flex;

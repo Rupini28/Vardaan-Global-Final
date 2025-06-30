@@ -1,11 +1,11 @@
 import React from "react";
 import "./Services.css";
-import vaspVideo from "../../assets/Products/vasp.mp4";
-import service1 from "../../assets/Products/service 1.jpg";
-import service2 from "../../assets/Products/service 2.avif";
-import service3 from "../../assets/Products/service 3.jpg";
-import service4 from "../../assets/Products/service 4.jpg";
-import Footer from "../../components/Footer";
+import vaspVideo from "../../../assets/Products/vasp.mp4";
+import service1 from "../../../assets/Products/service 1.jpg";
+import service2 from "../../../assets/Products/service 2.avif";
+import service3 from "../../../assets/Products/service 3.jpg";
+import service4 from "../../../assets/Products/service 4.jpg";
+import Footer from "../../../components/Footer";
 
 const Services = () => {
   return (

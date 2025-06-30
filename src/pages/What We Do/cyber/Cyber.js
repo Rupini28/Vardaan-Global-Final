@@ -1,13 +1,13 @@
 import React from "react";
 import "./Cyber.css";
-import videoSource from "../../assets/Products/Cybersecurity.mp4";
-import Footer from "../../components/Footer";
-import cyber1Image from "../../assets/Products/cyber 1.jpg";
-import cyberWebp from "../../assets/Products/cyber.webp";
-import cyber2Image from "../../assets/Products/cyber 2.jpg";
-import cyber3Image from "../../assets/Products/cyber 3.jpg";
-import cyber4Image from "../../assets/Products/cyber 4.jpg";
-import cyber5Image from "../../assets/Products/cyber 5.jpg";
+import videoSource from "../../../assets/Products/Cybersecurity.mp4";
+import Footer from "../../../components/Footer";
+import cyber1Image from "../../../assets/Products/cyber 1.jpg";
+import cyberWebp from "../../../assets/Products/cyber.webp";
+import cyber2Image from "../../../assets/Products/cyber 2.jpg";
+import cyber3Image from "../../../assets/Products/cyber 3.jpg";
+import cyber4Image from "../../../assets/Products/cyber 4.jpg";
+import cyber5Image from "../../../assets/Products/cyber 5.jpg";
 
 const Cyber = () => {
   return (

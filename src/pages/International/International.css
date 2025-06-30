@@ -248,23 +248,6 @@
   grid-template-columns: 1fr;
 }
 
-/* Policy Footer */
-.policy-footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 25px;
-  background: rgba(195, 139, 63, 0.1);
-  border-radius: 10px;
-  border: 1px solid rgba(195, 139, 63, 0.3);
-}
-
-.policy-footer p {
-  font-size: 1rem;
-  color: #c38b3f;
-  margin: 0;
-  font-weight: 500;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .international-header h1 {
@@ -367,10 +350,6 @@
   .international-section h3 {
     font-size: 1.1rem;
   }
-  
-  .policy-footer {
-    padding: 20px;
-  }
 }
 
 /* Print Styles */
@@ -406,15 +385,6 @@
   
   .international-section p,
   .international-section li {
-    color: #333;
-  }
-  
-  .policy-footer {
-    background: #f5f5f5;
-    border-color: #ccc;
-  }
-  
-  .policy-footer p {
     color: #333;
   }
 } 

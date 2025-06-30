@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Truck.css";
-import smartTrucksVideo from "../../assets/Products/smarttrucks.mp4";
-import truck1Image from "../../assets/Products/truck 1.jpg";
-import truck2Image from "../../assets/Products/truck 2.jpeg";
-import truck3Image from "../../assets/Products/truck 3.jpg";
-import Footer from "../../components/Footer";
+import smartTrucksVideo from "../../../assets/Products/smarttrucks.mp4";
+import truck1Image from "../../../assets/Products/truck 1.jpg";
+import truck2Image from "../../../assets/Products/truck 2.jpeg";
+import truck3Image from "../../../assets/Products/truck 3.jpg";
+import Footer from "../../../components/Footer";
 import { Link } from "react-router-dom";
 import { FaCog, FaEdit, FaThLarge } from "react-icons/fa";
 

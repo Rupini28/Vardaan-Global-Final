@@ -2,13 +2,16 @@
 .data-page {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   min-height: 100vh;
-  padding: 100px 0 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 0;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
   line-height: 1.7;
 }
 
 .data-container {
+  flex: 1 0 auto;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -393,23 +396,6 @@
   border-radius: 12px;
   padding: 25px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Footer */
-.policy-footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.policy-footer p {
-  font-size: 1.1rem;
-  color: #c38b3f;
-  font-weight: 600;
-  margin: 0;
 }
 
 /* Responsive Design */
