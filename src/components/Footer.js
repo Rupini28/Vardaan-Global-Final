@@ -109,17 +109,6 @@ const Footer = () => {
         
         <div className="footer-links-container">
           <div className="footer-links-row">
-            <div className="footer-section links">
-              <h2>QUICK LINKS</h2>
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/grc">What We Do</a></li>
-                <li><a href="/data-services">Our Services Offering</a></li>
-                <li><a href="/about">About Vardaan</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-              </ul>
-            </div>
-            
             <div className="footer-section services">
               <h2>OUR SERVICES</h2>
               <ul>
@@ -134,31 +123,55 @@ const Footer = () => {
                 {/* <li><a href="/custom-engineering">Custom Engineering Services</a></li> */}
               </ul>
             </div>
+            
+            <div className="footer-section links">
+              <h2>QUICK LINKS</h2>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/grc">What We Do</a></li>
+                <li><a href="/data-services">Our Services Offering</a></li>
+                <li><a href="/about">About Vardaan</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ul>
+            </div>
           
-          <div className="footer-section stay-connected">
-            <h2>STAY CONNECTED</h2>
-            <form className="email-form" onSubmit={handleEmailSubmit}>
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required 
-                disabled={isSubmitting}
-              />
-              <button 
-                type="submit" 
-                className="btn-join"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Sending...' : 'Send'}
-              </button>
-            </form>
-            {submitMessage && (
-              <div className="submit-message">
-                {submitMessage}
+            <div className="footer-section stay-connected-with-info">
+              <div className="stay-connected-content">
+                <h2>STAY CONNECTED</h2>
+                <form className="email-form" onSubmit={handleEmailSubmit}>
+                  <input 
+                    type="email" 
+                    placeholder="Email Address" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required 
+                    disabled={isSubmitting}
+                  />
+                  <button 
+                    type="submit" 
+                    className="btn-join"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send'}
+                  </button>
+                </form>
+                {submitMessage && (
+                  <div className="submit-message">
+                    {submitMessage}
+                  </div>
+                )}
               </div>
-            )}
+              
+              <div className="information-content">
+                <h2>INFORMATION</h2>
+                <ul>
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                  <li><a href="/cookie-policy">Cookie Policy & Consent Management</a></li>
+                  <li><a href="/terms-of-service">Terms of Service / Use</a></li>
+                  <li><a href="/data-retention-policy">Data Retention & Deletion Policy</a></li>
+                  <li><a href="/international-data-transfers">International Data Transfers Notice</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

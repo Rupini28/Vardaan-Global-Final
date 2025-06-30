@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Home.css";
-import { FaMicrochip, FaDatabase, FaUserTie, FaShieldAlt, FaTools, FaMoneyBill, FaUserCog, FaEye, FaDesktop, FaChalkboardTeacher, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaMicrochip, FaDatabase, FaUserTie, FaShieldAlt, FaTools, FaMoneyBill, FaUserCog, FaEye, FaDesktop, FaChalkboardTeacher } from "react-icons/fa";
 import Footer from "../../components/Footer";
 import aboutUsImg from '../../assets/aboutus1.jpg';
 import missionImg from '../../assets/mission.jpg';
@@ -186,6 +186,10 @@ const Home = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const heroSectionRef = useRef(null);
   
+  // Touch/swipe state
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  
   // Video references for all videos in the hero carousel
   const videoRefs = [
     useRef(null), // heroVideo1
@@ -215,6 +219,31 @@ const Home = () => {
   // Function to handle dot navigation
   const goToSlide = (index) => {
     setActiveSlide(index);
+  };
+
+  // Touch event handlers for swipe functionality
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    }
+    if (isRightSwipe) {
+      prevSlide();
+    }
   };
 
   // Function to handle hero click - either play video or navigate to product page
@@ -339,7 +368,12 @@ const Home = () => {
 
   return (
     <div className="home-main-container">
-      <section className="hero-lion-section">
+      <section 
+        className="hero-lion-section"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         <div className="video-overlay">
           {/* Render all videos */}
           {heroVideos.map((video, index) => (
@@ -372,17 +406,6 @@ const Home = () => {
           
           {/* Navigation controls */}
           <div className="hero-controls">
-            <button 
-              className="hero-nav-btn prev-btn" 
-              onClick={(e) => {
-                e.stopPropagation();
-                prevSlide();
-              }}
-              aria-label="Previous slide"
-            >
-              <FaArrowLeft />
-            </button>
-            
             <div className="hero-dots">
               {heroVideos.map((_, index) => (
                 <button 
@@ -395,18 +418,7 @@ const Home = () => {
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
-          </div>
-          
-            <button 
-              className="hero-nav-btn next-btn" 
-              onClick={(e) => {
-                e.stopPropagation();
-                nextSlide();
-              }}
-              aria-label="Next slide"
-            >
-              <FaArrowRight />
-            </button>
+            </div>
           </div>
         </div>
       </section>

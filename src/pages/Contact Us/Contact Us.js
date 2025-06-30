@@ -157,6 +157,7 @@ function GetInTouch() {
   const [showLoadingModal, setShowLoadingModal] = useState(false);
   const [formSubmitStatus, setFormSubmitStatus] = useState({ success: '', error: '' });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   
   // Add refs for the world map
   const containerRef = useRef(null);
@@ -463,6 +464,12 @@ function GetInTouch() {
       return;
     }
     
+    // Check if privacy policy is accepted
+    if (!privacyAccepted) {
+      alert('Please read and accept the Privacy Policy and Cookie Consent to submit the form');
+      return;
+    }
+    
     // Reset all modal states first
     setShowModal(false);
     setShowErrorDialog(false);
@@ -516,6 +523,9 @@ function GetInTouch() {
         phone: '',
         message: ''
       });
+      
+      // Reset privacy checkbox
+      setPrivacyAccepted(false);
       
       setFormSubmitStatus({ success: '', error: '' });
       
@@ -582,14 +592,14 @@ function GetInTouch() {
                     ))}
                   </div>
                   
-                  <div className="contact-info">
-                    <div className="contact-item">
+                  <div className="office-contact-info">
+                    <div className="office-contact-item">
                       <EmailIcon />
                       <p>{countryData['india'].email}</p>
                     </div>
                     
                     {countryData['india'].phone.map((number, index) => (
-                      <div key={index} className="contact-item">
+                      <div key={index} className="office-contact-item">
                         <PhoneIcon />
                         <p>{number}</p>
                       </div>
@@ -641,14 +651,14 @@ function GetInTouch() {
                     ))}
                   </div>
                   
-                  <div className="contact-info">
-                    <div className="contact-item">
+                  <div className="office-contact-info">
+                    <div className="office-contact-item">
                       <EmailIcon />
                       <p>{countryData['malaysia'].email}</p>
                     </div>
                     
                     {countryData['malaysia'].phone.map((number, index) => (
-                      <div key={index} className="contact-item">
+                      <div key={index} className="office-contact-item">
                         <PhoneIcon />
                         <p>{number}</p>
                       </div>
@@ -700,14 +710,14 @@ function GetInTouch() {
                     ))}
                   </div>
                   
-                  <div className="contact-info">
-                    <div className="contact-item">
+                  <div className="office-contact-info">
+                    <div className="office-contact-item">
                       <EmailIcon />
                       <p>{countryData['uae'].email}</p>
                     </div>
                     
                     {countryData['uae'].phone.map((number, index) => (
-                      <div key={index} className="contact-item">
+                      <div key={index} className="office-contact-item">
                         <PhoneIcon />
                         <p>{number}</p>
                       </div>
@@ -762,14 +772,14 @@ function GetInTouch() {
                     ))}
                   </div>
                   
-                  <div className="contact-info">
-                    <div className="contact-item">
+                  <div className="office-contact-info">
+                    <div className="office-contact-item">
                       <EmailIcon />
                       <p>{countryData['uk'].email}</p>
                     </div>
                     
                     {countryData['uk'].phone.map((number, index) => (
-                      <div key={index} className="contact-item">
+                      <div key={index} className="office-contact-item">
                         <PhoneIcon />
                         <p>{number}</p>
                       </div>
@@ -821,14 +831,14 @@ function GetInTouch() {
                     ))}
                   </div>
                   
-                  <div className="contact-info">
-                    <div className="contact-item">
+                  <div className="office-contact-info">
+                    <div className="office-contact-item">
                       <EmailIcon />
                       <p>{countryData['usa'].email}</p>
                     </div>
                     
                     {countryData['usa'].phone.map((number, index) => (
-                      <div key={index} className="contact-item">
+                      <div key={index} className="office-contact-item">
                         <PhoneIcon />
                         <p>{number}</p>
                       </div>
@@ -937,7 +947,30 @@ function GetInTouch() {
                   </div>
                 </div>
                 
-                <button type="submit" className="submit-button" disabled={isSubmitting}>
+                <div className="form-row full-width">
+                  <div className="privacy-checkbox-container">
+                    <input 
+                      type="checkbox" 
+                      id="privacyConsent" 
+                      checked={privacyAccepted}
+                      onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                      className="privacy-checkbox"
+                      required
+                    />
+                    <label htmlFor="privacyConsent" className="privacy-label">
+                      I have read and accept the{' '}
+                      <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="privacy-link">
+                        Privacy Policy
+                      </a>
+                      {' '}and{' '}
+                      <a href="/cookie-policy" target="_blank" rel="noopener noreferrer" className="privacy-link">
+                        Cookie Consent
+                      </a>
+                    </label>
+                  </div>
+                </div>
+                
+                <button type="submit" className="submit-button" disabled={isSubmitting || !privacyAccepted}>
                   {isSubmitting ? 'Submitting...' : 'Submit'}
                 </button>
                 
@@ -971,7 +1004,7 @@ function GetInTouch() {
           
           <div className="mobile-contact-section">
             <h2>Contact Information</h2>
-            <div className="mobile-contact-info">
+            <div className="mobile-office-contact-info">
               <div className="mobile-info-group">
                 <h3><EmailIcon /> Email Address</h3>
                 <p>{currentCountry.email}</p>
@@ -1069,10 +1102,34 @@ function GetInTouch() {
                   />
                 </div>
               </div>
+              
+              <div className="mobile-form-field">
+                <div className="mobile-privacy-checkbox-container">
+                  <input 
+                    type="checkbox" 
+                    id="mobilePrivacyConsent" 
+                    checked={privacyAccepted}
+                    onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                    className="mobile-privacy-checkbox"
+                    required
+                  />
+                  <label htmlFor="mobilePrivacyConsent" className="mobile-privacy-label">
+                    I have read and accept the{' '}
+                    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="mobile-privacy-link">
+                      Privacy Policy
+                    </a>
+                    {' '}and{' '}
+                    <a href="/cookie-policy" target="_blank" rel="noopener noreferrer" className="mobile-privacy-link">
+                      Cookie Consent
+                    </a>
+                  </label>
+                </div>
+              </div>
+              
               <button 
                 type="submit" 
                 className="mobile-submit-button"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !privacyAccepted}
               >
                 {isSubmitting ? 'Sending...' : 'Submit'}
               </button>

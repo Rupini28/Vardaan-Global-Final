@@ -165,13 +165,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 0;
   color: #fff;
   font-size: 1.2rem;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   margin-right: 15px;
 }
 
@@ -180,7 +180,8 @@
 }
 
 .socials a:hover {
-  background: #c38b3f;
+  background: none;
+  color: #c38b3f;
   transform: translateY(-3px);
 }
 
@@ -201,9 +202,61 @@
 
 .footer-section.links,
 .footer-section.services,
-.footer-section.stay-connected {
+.footer-section.stay-connected-with-info {
   flex: 1;
   min-width: 200px;
+}
+
+.stay-connected-content {
+  margin-bottom: 30px;
+}
+
+.information-content {
+  margin-top: 10px;
+}
+
+.information-content h2 {
+  position: relative;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.information-content h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #c38b3f;
+}
+
+.information-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.information-content ul li {
+  margin-bottom: 12px;
+}
+
+.information-content ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 0.95rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.information-content ul li a:hover {
+  color: #c38b3f;
+  transform: translateX(5px);
 }
 
 .footer-section ul {
@@ -412,14 +465,19 @@
     width: 100%;
   }
   
-  /* Create a row for all three sections */
+  /* Create a row for three sections */
   .footer-section.links,
   .footer-section.services,
-  .footer-section.stay-connected {
+  .footer-section.stay-connected-with-info {
     flex: 1;
     min-width: 30%;
     text-align: center;
     margin-bottom: 25px;
+  }
+  
+  .information-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .footer-section h2 {
@@ -489,12 +547,22 @@
     padding: 0 10px;
   }
   
-  /* Maintain side-by-side layout but adjust font size and spacing */
+  .footer-links-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
   .footer-section.links,
   .footer-section.services,
-  .footer-section.stay-connected {
+  .footer-section.stay-connected-with-info {
+    min-width: 30%;
     margin-bottom: 20px;
     font-size: 0.85rem;
+  }
+  
+  .information-content {
+    font-size: 0.85rem;
+    text-align: center;
   }
   
   .footer-section.links ul li,
@@ -560,5 +628,14 @@
 @media screen and (min-width: 769px) {
   .footer-links-row {
     justify-content: space-around;
+  }
+  
+  .information-content {
+    text-align: left;
+  }
+  
+  .information-content h2::after {
+    left: 0;
+    transform: none;
   }
 } 

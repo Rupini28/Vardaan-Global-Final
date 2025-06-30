@@ -21,6 +21,11 @@ import CybersecurityServices from "./pages/What We do/Cybersecurity Services/Cyb
 import CustomEngineeringServices from "./pages/What We do/Custom Engineering Services/Custom Engineering Services";
 import GetInTouch from "./pages/Contact Us/Contact Us";
 import AboutVardaan from "./pages/About Vardaan/About Vardaan";
+import Privacy from "./pages/Privacy/Privacy";
+import Cookie from "./pages/Cookie/Cookie";
+import Terms from "./pages/Terms/Terms";
+import Data from "./pages/Data/Data";
+import International from "./pages/International/International";
 import "./theme.css"; // if you want consistent styling
 import ScrollToTop from './components/ScrollToTop';
 
@@ -42,6 +47,11 @@ function App() {
         <Route path="/robotics" component={Robotics} />
         <Route path="/about" component={AboutVardaan} />
         <Route path="/contact" component={GetInTouch} />
+        <Route path="/privacy-policy" component={Privacy} />
+        <Route path="/cookie-policy" component={Cookie} />
+        <Route path="/terms-of-service" component={Terms} />
+        <Route path="/data-retention-policy" component={Data} />
+        <Route path="/international-data-transfers" component={International} />
 
         {/* What We Do Section */}
         {/* <Route path="/ai-products" component={Products} /> */}
