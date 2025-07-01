@@ -296,12 +296,11 @@
 }
 
 /* Dynamic positioning */
-.timeline-item[data-position="8%"] { left: 10%; }
-.timeline-item[data-position="25%"] { left: 25%; }
-.timeline-item[data-position="42%"] { left: 42%; }
-.timeline-item[data-position="59%"] { left: 58%; }
-.timeline-item[data-position="76%"] { left: 75%; }
-.timeline-item[data-position="92%"] { left: 90%; }
+.timeline-item[data-position="10%"] { left: 10%; }
+.timeline-item[data-position="30%"] { left: 30%; }
+.timeline-item[data-position="50%"] { left: 50%; }
+.timeline-item[data-position="70%"] { left: 70%; }
+.timeline-item[data-position="90%"] { left: 90%; }
 
 /* Timeline Content - No card background */
 .timeline-content {

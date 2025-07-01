@@ -1,13 +1,13 @@
 import React from "react";
 import "./Cyber.css";
-import videoSource from "../../../assets/Products/Cyber Security/Cybersecurity.mp4";
+import videoSource from "../../../assets/Products/Cyber/Cybersecurity.mp4";
 import Footer from "../../../components/Footer";
-import cyber1Image from "../../../assets/Products/Cyber Security/cyber 1.jpg";
-import cyberWebp from "../../../assets/Products/Cyber Security/cyber.webp";
-import cyber2Image from "../../../assets/Products/Cyber Security/cyber 2.jpg";
-import cyber3Image from "../../../assets/Products/Cyber Security/cyber 3.jpg";
-import cyber4Image from "../../../assets/Products/Cyber Security/cyber 4.jpg";
-import cyber5Image from "../../../assets/Products/Cyber Security/cyber 5.jpg";
+import cyber1Image from "../../../assets/Products/Cyber/cyber 1.jpg";
+import cyberWebp from "../../../assets/Products/Cyber/cyber.webp";
+import cyber2Image from "../../../assets/Products/Cyber/cyber 2.jpg";
+import cyber3Image from "../../../assets/Products/Cyber/cyber 3.jpg";
+import cyber4Image from "../../../assets/Products/Cyber/cyber 4.jpg";
+import cyber5Image from "../../../assets/Products/Cyber/cyber 5.jpg";
 
 const Cyber = () => {
   return (

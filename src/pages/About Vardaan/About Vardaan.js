@@ -256,18 +256,17 @@ const Leadership = () => {
           <div className="timeline-wrapper">
             {/* Timeline Bar */}
             <div className="timeline-bar">
-              <div className="timeline-segment vardaan-resources" style={{width: '16.67%'}}></div>
-              <div className="timeline-segment vardaan-cyber" style={{width: '16.67%'}}></div>
-              <div className="timeline-segment vardaan-data" style={{width: '16.67%'}}></div>
-              <div className="timeline-segment vardaan-global" style={{width: '16.67%'}}></div>
-              <div className="timeline-segment vardaan-cyber" style={{width: '16.67%'}}></div>
-              <div className="timeline-segment vardaan-expansion" style={{width: '16.67%'}}></div>
+              <div className="timeline-segment vardaan-resources" style={{width: '20%'}}></div>
+              <div className="timeline-segment vardaan-cyber" style={{width: '20%'}}></div>
+              <div className="timeline-segment vardaan-data" style={{width: '20%'}}></div>
+              <div className="timeline-segment vardaan-global" style={{width: '20%'}}></div>
+              <div className="timeline-segment vardaan-expansion" style={{width: '20%'}}></div>
             </div>
             
             {/* Timeline Items */}
             <div className="timeline-items">
               {/* 2005 - Above timeline */}
-              <div className="timeline-item above" data-position="8%">
+              <div className="timeline-item above" data-position="10%">
                 <div className="timeline-content">
                   <div className="timeline-text">
                     <h3 className="timeline-company">Vardaan Projects Limited (VPL)</h3>
@@ -279,7 +278,7 @@ const Leadership = () => {
               </div>
               
               {/* 2010 - Below timeline */}
-              <div className="timeline-item below" data-position="25%">
+              <div className="timeline-item below" data-position="30%">
                 <div className="timeline-connector below"></div>
                 <div className="timeline-content">
                   <div className="timeline-badge vardaan-resources-badge">2010</div>
@@ -290,52 +289,40 @@ const Leadership = () => {
                 </div>
               </div>
               
-              {/* 2013 - Above timeline */}
-              <div className="timeline-item above" data-position="42%">
+              {/* 2018 - Above timeline */}
+              <div className="timeline-item above" data-position="50%">
                 <div className="timeline-content">
-                  <div className="timeline-text">
-                    <h3 className="timeline-company">Vardaan Global Enterprises Ltd (India)</h3>
-                    <p className="timeline-description">Incorporated in Jaipur, India (CIN: U52190RJ2013PLC043273) as a Public Company focused on retail and commercial business services.</p>
-                  </div>
-                  <div className="timeline-badge vardaan-cyber-badge">2013</div>
-                </div>
-                <div className="timeline-connector above"></div>
-              </div>
-              
-              {/* 2018 - Below timeline */}
-              <div className="timeline-item below" data-position="59%">
-                <div className="timeline-connector below"></div>
-                <div className="timeline-content">
-                  <div className="timeline-badge vardaan-cyber-badge">2018</div>
                   <div className="timeline-text">
                     <h3 className="timeline-company">Entry into Cybersecurity with Prometis</h3>
                     <p className="timeline-description">Vardaan Global launched Prometis Cyber Security to offer Virtual CISO services, Penetration Testing, Cybersecurity as a Service (CaaS), and SOC & SIEM setups. This marked the start of the cybersecurity vertical under the global brand.</p>
                   </div>
-                </div>
-              </div>
-              
-              {/* 2019 - Above timeline */}
-              <div className="timeline-item above" data-position="76%">
-                <div className="timeline-content">
-                  <div className="timeline-text">
-                    <h3 className="timeline-company">Vardaan Sdn Bhd (Malaysia)</h3>
-                    <p className="timeline-description">Founded in 2019 with official launch planned for 2020. Services: Cybersecurity, AI/ML solutions, Risk Intelligence, and Training. Markets: Malaysia, India, UAE, US, and UK. Technologies Used: Oracle, Microsoft Azure, Red Hat, SAS.</p>
-                  </div>
-                  <div className="timeline-badge vardaan-data-badge">2019</div>
+                  <div className="timeline-badge vardaan-cyber-badge">2018</div>
                 </div>
                 <div className="timeline-connector above"></div>
               </div>
               
-              {/* 2020 - Below timeline */}
-              <div className="timeline-item below" data-position="92%">
+              {/* 2019 - Below timeline */}
+              <div className="timeline-item below" data-position="70%">
                 <div className="timeline-connector below"></div>
                 <div className="timeline-content">
-                  <div className="timeline-badge vardaan-expansion-badge">2020</div>
+                  <div className="timeline-badge vardaan-data-badge">2019</div>
+                  <div className="timeline-text">
+                    <h3 className="timeline-company">Vardaan Sdn Bhd (Malaysia)</h3>
+                    <p className="timeline-description">Founded in 2019 with official launch planned for 2020. Services: Cybersecurity, AI/ML solutions, Risk Intelligence, and Training. Markets: Malaysia, India, UAE, US, and UK. Technologies Used: Oracle, Microsoft Azure, Red Hat, SAS.</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* 2020 - Above timeline */}
+              <div className="timeline-item above" data-position="90%">
+                <div className="timeline-content">
                   <div className="timeline-text">
                     <h3 className="timeline-company">Global Expansion</h3>
                     <p className="timeline-description">Vardaan Cybersecurity (Malaysia) begins full-scale operations. Group Headquarters moved to Dubai, UAE. "Vardaan Global" becomes an umbrella brand for all tech and consulting verticals. Clients: Government, BFSI, Energy, and Healthcare sectors.</p>
                   </div>
+                  <div className="timeline-badge vardaan-expansion-badge">2020</div>
                 </div>
+                <div className="timeline-connector above"></div>
               </div>
             </div>
           </div>
